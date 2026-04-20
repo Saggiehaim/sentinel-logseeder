@@ -1,0 +1,441 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Action", "type": "string", "values": [
+      "repo.create", "repo.create", "repo.create",
+      "repo.destroy", "repo.archived",
+      "repo.access", "repo.access",
+      "team.add_member", "team.add_member", "team.add_member",
+      "team.remove_member",
+      "team.create",
+      "org.invite_member", "org.invite_member",
+      "org.remove_member",
+      "org.update_member",
+      "org.update_default_repository_permission",
+      "protected_branch.create", "protected_branch.update",
+      "git.push", "git.push", "git.push", "git.push", "git.push",
+      "git.clone", "git.clone", "git.clone", "git.clone",
+      "git.fetch", "git.fetch", "git.fetch",
+      "hook.create", "hook.destroy",
+      "integration_installation.create", "integration_installation.destroy",
+      "oauth_application.create",
+      "secret_scanning_alert.create", "secret_scanning_alert.resolve",
+      "dependabot_alerts_new_repos.enable",
+      "workflows.completed_workflow_run", "workflows.completed_workflow_run", "workflows.completed_workflow_run",
+      "repo.change_merge_setting",
+      "private_repository_forking.enable",
+      "members_can_create_pages.enable",
+      "repository_visibility_change.enable",
+      "two_factor_authentication.enabled",
+      "ip_allow_list_entry.create",
+      "personal_access_token.access_granted",
+      "personal_access_token.request_created",
+      "audit_log_streaming.update",
+      "business.set_actions_fork_pr_approvals_policy",
+      "repo.add_member", "repo.add_member",
+      "repo.remove_member"
+    ]},
+    { "name": "Actor", "type": "string", "values": [
+      "jsmith", "agarcia", "mwilson", "lchen", "pjones",
+      "admin", "rsingh", "kbrown", "tnguyen",
+      "contoso-bot", "dependabot[bot]", "github-actions[bot]"
+    ]},
+    { "name": "Org", "type": "string", "values": [
+      "contoso", "contoso", "contoso", "contoso", "contoso",
+      "contoso-labs", "contoso-labs",
+      "contoso-security"
+    ]},
+    { "name": "Repo", "type": "string", "values": [
+      "contoso/webapp-frontend", "contoso/webapp-frontend",
+      "contoso/webapp-backend", "contoso/webapp-backend",
+      "contoso/api-gateway",
+      "contoso/infra-terraform", "contoso/infra-terraform",
+      "contoso/docs-internal",
+      "contoso/mobile-app",
+      "contoso-labs/ml-pipeline",
+      "contoso-labs/data-analytics",
+      "contoso-security/sentinel-rules",
+      "contoso/devops-scripts",
+      "contoso/shared-libraries",
+      ""
+    ]},
+    { "name": "User", "type": "string", "values": [
+      "jsmith", "agarcia", "mwilson", "lchen", "pjones",
+      "rsingh", "kbrown", "tnguyen", "", "", ""
+    ]},
+    { "name": "ActorIp", "type": "string", "values": [
+      "203.0.113.42", "198.51.100.17", "100.21.55.130", "52.168.112.66",
+      "10.0.1.50", "10.0.1.51", "10.0.2.10", "10.0.2.20",
+      "172.16.0.100", "192.168.1.200",
+      "40.112.72.205", "13.87.220.116", "104.210.39.188"
+    ]},
+    { "name": "ActorId", "type": "real", "values": [
+      100234, 100235, 100236, 100237, 100238,
+      100239, 100240, 100241, 100242,
+      200001, 200002, 200003
+    ]},
+    { "name": "ActorIsBot", "type": "boolean", "values": [
+      false, false, false, false, false, false, false, false, false,
+      true, true, true
+    ]},
+    { "name": "CountryCode", "type": "string", "values": [
+      "US", "US", "US", "US", "US",
+      "GB", "IN", "CA", "DE",
+      "NL", "JP", ""
+    ]},
+    { "name": "OperationType", "type": "string", "values": [
+      "create", "create", "create", "create",
+      "access", "access",
+      "modify", "modify",
+      "remove",
+      ""
+    ]},
+    { "name": "CreatedAt", "type": "real" },
+    { "name": "OrgId", "type": "real", "values": [
+      80001234, 80001234, 80001234, 80001234,
+      80005678, 80005678,
+      80009012
+    ]},
+    { "name": "Visibility", "type": "string", "values": [
+      "private", "private", "private", "private",
+      "internal", "internal",
+      "public",
+      ""
+    ]},
+    { "name": "PreviousVisibility", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "private", "internal", "public"
+    ]},
+    { "name": "Permission", "type": "string", "values": [
+      "read", "read", "read",
+      "write", "write",
+      "admin",
+      "maintain",
+      "triage",
+      "", "", ""
+    ]},
+    { "name": "OldPermission", "type": "string", "values": [
+      "", "", "", "", "",
+      "read", "write", "triage"
+    ]},
+    { "name": "Team", "type": "string", "values": [
+      "contoso/engineering", "contoso/engineering",
+      "contoso/devops",
+      "contoso/security-team",
+      "contoso/frontend-devs",
+      "contoso-labs/data-science",
+      "", "", ""
+    ]},
+    { "name": "PublicRepo", "type": "boolean", "values": [
+      false, false, false, false, false, false,
+      true, true
+    ]},
+    { "name": "BusinessId", "type": "real", "values": [
+      9001, 9001, 9001, 9001
+    ]},
+    { "name": "Business", "type": "string", "values": [
+      "contoso-enterprise", "contoso-enterprise", "contoso-enterprise"
+    ]},
+    { "name": "RepoId", "type": "real", "values": [
+      500001, 500002, 500003, 500004, 500005,
+      500006, 500007, 500008, 500009, 500010
+    ]},
+    { "name": "UserAgent", "type": "string", "values": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
+      "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0",
+      "git/2.44.0",
+      "git/2.43.2",
+      "GitHub CLI 2.49.0",
+      "GitHub Desktop 3.3.14",
+      "GitHub-Hookshot/dc0e364",
+      "octokit-rest.js/20.0.2",
+      ""
+    ]},
+    { "name": "UserId", "type": "real", "values": [
+      100234, 100235, 100236, 100237, 100238,
+      100239, 100240, 100241, 100242
+    ]},
+    { "name": "Email", "type": "string", "values": [
+      "jsmith@contoso.com", "agarcia@contoso.com", "mwilson@contoso.com",
+      "lchen@contoso.com", "pjones@contoso.com",
+      "rsingh@contoso.com", "kbrown@contoso.com", "tnguyen@contoso.com",
+      "", ""
+    ]},
+    { "name": "DocumentId", "type": "string", "values": [
+      "xJJFlFOhQ6b-5vaAFy9Rjw", "Vqvg6kZ4MYqwWRKFDzlMoQ", "LwW2vpJZCDS-WUmo9Z-ifw",
+      "kR4pPfT1S2yNm8vLxHq3Dg", "bQ7zWn0cRyeJ5fXmKtA2Pw", "nH6dYo3gVuiL9cBpJ1sEwQ",
+      "mT8xAk5jWqeC2vRnF0yGzI", "oU9wBl6kXriD3gSnH2tFvK", "pV0xCm7lYsjE4hToI3uGwL",
+      "qW1yDn8mZtkF5iUpJ4vHxM"
+    ]},
+    { "name": "TransportProtocol", "type": "real", "values": [
+      2, 2, 2, 2, 1, 0
+    ]},
+    { "name": "TransportProtocolName", "type": "string", "values": [
+      "http", "http", "http", "http", "ssh", ""
+    ]},
+    { "name": "BlockedUser", "type": "string", "values": [
+      "", "", "", "", "", "", "",
+      "spambot-42", "malicious-user-99"
+    ]},
+    { "name": "InviteeEmail", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "newdev@contoso.com", "contractor@fabrikam.net", "partner@woodgrove.com"
+    ]},
+    { "name": "Name", "type": "string", "values": [
+      "webapp-frontend", "webapp-backend", "api-gateway",
+      "infra-terraform", "docs-internal", "mobile-app",
+      "engineering", "devops", "security-team",
+      "", ""
+    ]},
+    { "name": "HashedToken", "type": "string", "values": [
+      "AABCDEFFEDCBA00112233445566778899==",
+      "BBCDEFFEDCBA001122334455667788990A==",
+      "CCDEFFEDCBA001122334455667788990AB1==",
+      "", "", "", "", ""
+    ]},
+    { "name": "ProgrammaticAccessType", "type": "string", "values": [
+      "OAuth access token", "OAuth access token",
+      "GitHub App server-to-server token",
+      "GitHub App user-to-server token",
+      "Personal access token",
+      "Fine-grained personal access token",
+      "", "", ""
+    ]},
+    { "name": "TokenId", "type": "real", "values": [
+      300001, 300002, 300003, 300004, 300005, 0
+    ]},
+    { "name": "RequestCategory", "type": "string", "values": [
+      "", "", "", "", "",
+      "other", "authentication", "actions_pipeline"
+    ]},
+    { "name": "Reason", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "Completed required reviews", "Required checks passed",
+      "All required conversations were resolved"
+    ]},
+    { "name": "MembershipType", "type": "string", "values": [
+      "", "", "", "",
+      "admin", "member", "billing_manager", "outside_collaborator"
+    ]},
+    { "name": "RepositorySelection", "type": "string", "values": [
+      "", "", "", "",
+      "all", "selected"
+    ]},
+    { "name": "BaseRole", "type": "string", "values": [
+      "", "", "", "",
+      "read", "write", "admin", "none"
+    ]},
+    { "name": "Conclusion", "type": "string", "values": [
+      "", "", "", "",
+      "success", "success", "success",
+      "failure", "cancelled", "timed_out", "skipped"
+    ]},
+    { "name": "Event", "type": "string", "values": [
+      "", "", "", "",
+      "push", "push", "pull_request", "schedule", "workflow_dispatch"
+    ]},
+    { "name": "HeadBranch", "type": "string", "values": [
+      "", "", "", "",
+      "main", "main", "develop", "feature/auth-v2", "release/3.0", "hotfix/sec-patch"
+    ]},
+    { "name": "HeadSha", "type": "string", "values": [
+      "", "", "", "",
+      "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2",
+      "b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3",
+      "c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4",
+      "d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5"
+    ]},
+    { "name": "WorkflowId", "type": "real", "values": [
+      0, 0, 0, 0,
+      70001, 70002, 70003, 70004
+    ]},
+    { "name": "WorkflowRunId", "type": "real", "values": [
+      0, 0, 0, 0,
+      8000001, 8000002, 8000003, 8000004, 8000005
+    ]},
+    { "name": "RunAttempt", "type": "real", "values": [
+      0, 0, 0, 0, 1, 1, 1, 2
+    ]},
+    { "name": "RunNumber", "type": "real", "values": [
+      0, 0, 0, 0,
+      142, 143, 144, 145, 146, 201, 202
+    ]},
+    { "name": "JobName", "type": "string", "values": [
+      "", "", "", "",
+      "build", "test", "deploy", "lint", "security-scan"
+    ]},
+    { "name": "JobWorkflowRef", "type": "string", "values": [
+      "", "", "", "",
+      "contoso/webapp-frontend/.github/workflows/ci.yml@refs/heads/main",
+      "contoso/webapp-backend/.github/workflows/build.yml@refs/heads/main",
+      "contoso/infra-terraform/.github/workflows/plan.yml@refs/heads/main"
+    ]},
+    { "name": "RunnerGroupName", "type": "string", "values": [
+      "", "", "", "",
+      "Default", "self-hosted-linux", "self-hosted-windows"
+    ]},
+    { "name": "RunnerName", "type": "string", "values": [
+      "", "", "", "",
+      "GitHub Actions 2", "GitHub Actions 3",
+      "contoso-runner-01", "contoso-runner-02"
+    ]},
+    { "name": "IsHostedRunner", "type": "boolean", "values": [
+      false, false, false, false,
+      true, true, false
+    ]},
+    { "name": "EnvironmentName", "type": "string", "values": [
+      "", "", "", "", "",
+      "production", "staging", "development"
+    ]},
+    { "name": "HookId", "type": "real", "values": [
+      0, 0, 0, 0, 0,
+      410001, 410002, 410003
+    ]},
+    { "name": "ContentType", "type": "string", "values": [
+      "", "", "", "", "",
+      "json", "form"
+    ]},
+    { "name": "Active", "type": "boolean", "values": [
+      false, false, false, false,
+      true, true, true
+    ]},
+    { "name": "Integration", "type": "string", "values": [
+      "", "", "", "", "",
+      "Dependabot", "GitHub Actions", "Codecov", "SonarCloud", "Azure Pipelines"
+    ]},
+    { "name": "OauthApplication", "type": "string", "values": [
+      "", "", "", "", "",
+      "Visual Studio Code", "GitHub Desktop", "Slack GitHub Notifications"
+    ]},
+    { "name": "Source", "type": "string", "values": [
+      "", "", "", "",
+      "web", "api", "git", "cli"
+    ]},
+    { "name": "ActivityType", "type": "string", "values": [
+      "", "", "", "",
+      "push", "read", "clone", "fetch"
+    ]},
+    { "name": "TargetLogin", "type": "string", "values": [
+      "", "", "", "", "",
+      "jsmith", "agarcia", "mwilson", "lchen"
+    ]},
+    { "name": "Ref", "type": "string", "values": [
+      "", "", "", "",
+      "refs/heads/main", "refs/heads/develop", "refs/heads/feature/auth-v2",
+      "refs/tags/v3.0.1", "refs/tags/v2.9.0"
+    ]},
+    { "name": "RepositorySecurityConfigurationFailureReason", "type": "dynamic", "values": [
+      {}, {}, {}, {}, {},
+      {"reason": "repository_not_found"},
+      {"reason": "insufficient_permissions"}
+    ]},
+    { "name": "RepositorySecurityConfigurationState", "type": "dynamic", "values": [
+      {}, {}, {}, {}, {},
+      {"state": "attached"},
+      {"state": "detached"},
+      {"state": "enforced"}
+    ]},
+    { "name": "Policy", "type": "string", "values": [
+      "", "", "", "", "",
+      "enabled", "disabled", "not_set"
+    ]},
+    { "name": "TwoFactorMethod", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "totp", "sms", "security_key", "github_mobile"
+    ]},
+    { "name": "EnforcementLevel", "type": "string", "values": [
+      "", "", "", "",
+      "off", "non_admins", "everyone"
+    ]},
+    { "name": "GhsaId", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "GHSA-x7cr-6qr4-mm8x", "GHSA-9p8r-4fh7-v2jj", "GHSA-g6wq-qcwm-j5g2"
+    ]},
+    { "name": "Enablement", "type": "string", "values": [
+      "", "", "", "",
+      "enabled", "disabled"
+    ]},
+    { "name": "CustomPattern", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "contoso_api_key_[a-zA-Z0-9]{32}", "internal_secret_[A-Z]{8}"
+    ]},
+    { "name": "DomainName", "type": "string", "values": [
+      "", "", "", "", "",
+      "contoso.com", "github.contoso.com"
+    ]},
+    { "name": "IpAllowListEntry", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "10.0.0.0/8", "172.16.0.0/12", "203.0.113.0/24"
+    ]},
+    { "name": "AuditLogStreamSink", "type": "string", "values": [
+      "", "", "", "", "", "", "",
+      "Azure Event Hubs", "Splunk", "Amazon S3"
+    ]},
+    { "name": "AuditLogStreamResult", "type": "string", "values": [
+      "", "", "", "", "", "", "",
+      "success", "failure"
+    ]},
+    { "name": "StartedAt", "type": "datetime" },
+    { "name": "CompletedAt", "type": "datetime" },
+    { "name": "Recipient", "type": "string", "values": [
+      "", "", "", "", "",
+      "jsmith", "agarcia", "mwilson"
+    ]},
+    { "name": "Fingerprint", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8",
+      "SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU"
+    ]},
+    { "name": "ReadOnly", "type": "boolean", "values": [
+      false, false, false, false,
+      true, false
+    ]},
+    { "name": "Data", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "{\"hook_id\":410001,\"url\":\"https://hooks.contoso.com/github\"}"
+    ]},
+    { "name": "CommitOid", "type": "string", "values": [
+      "", "", "", "", "",
+      "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2",
+      "f6e5d4c3b2a1f6e5d4c3b2a1f6e5d4c3b2a1f6e5"
+    ]},
+    { "name": "Branch", "type": "string", "values": [
+      "", "", "", "", "",
+      "main", "develop", "feature/auth-v2", "release/3.0"
+    ]},
+    { "name": "Owner", "type": "string", "values": [
+      "", "", "", "", "",
+      "contoso", "contoso-labs"
+    ]},
+    { "name": "Message", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "Repository created", "Team membership updated", "Branch protection rule updated"
+    ]},
+    { "name": "Explanation", "type": "string", "values": [
+      "", "", "", "", "", "",
+      "User was removed for violating organization policies",
+      "Token revoked due to suspicious activity"
+    ]},
+    { "name": "SecurityConfigurationName", "type": "string", "values": [
+      "", "", "", "", "",
+      "GitHub recommended", "contoso-standard", "contoso-strict"
+    ]},
+    { "name": "OwnerType", "type": "string", "values": [
+      "", "", "", "",
+      "Organization", "Enterprise", "User"
+    ]},
+    { "name": "UserCanInviteCollaborators", "type": "boolean", "values": [false, false, false, true, true] },
+    { "name": "CanCreateRepositories", "type": "boolean", "values": [false, false, true, true, true] },
+    { "name": "ExemptAdministrators", "type": "boolean", "values": [false, false, false, true] },
+    { "name": "AdminEnforced", "type": "boolean", "values": [false, false, false, true] },
+    { "name": "NewRepoPermission", "type": "string", "values": ["", "", "", "", "read", "write", "admin"] },
+    { "name": "OldRepoPermission", "type": "string", "values": ["", "", "", "", "read", "write"] },
+    { "name": "Topic", "type": "string", "values": ["", "", "", "", "", "javascript", "terraform", "security", "devops"] },
+    { "name": "ApplicationClientId", "type": "string", "values": ["", "", "", "", "", "Iv1.abc1234def5678", "Iv1.99887766554433"] },
+    { "name": "SsoUrl", "type": "string", "values": ["", "", "", "", "", "", "https://login.microsoftonline.com/contoso/saml2"] },
+    { "name": "Issuer", "type": "string", "values": ["", "", "", "", "", "", "https://sts.windows.net/5f1060f2-d9a4-4f59-bf9c-1dd8f3604a4b/"] },
+    { "name": "ExternalIdentityUsername", "type": "string", "values": ["", "", "", "", "", "jsmith@contoso.com", "agarcia@contoso.com"] },
+    { "name": "ExternalIdentityNameid", "type": "string", "values": ["", "", "", "", "", "jsmith@contoso.com", "agarcia@contoso.com"] }
+  ]
+}

@@ -1,4 +1,5 @@
 {
+  "transformKql": "source | extend AwsEventId = toguid(AwsEventId), SharedEventId = toguid(SharedEventId)",
   "columns": [
     { "name": "TimeGenerated", "type": "datetime" },
     { "name": "EventName", "type": "string", "values": ["ConsoleLogin", "AssumeRole", "CreateUser", "DeleteUser", "PutBucketPolicy", "RunInstances", "StopInstances", "CreateAccessKey", "PutRolePolicy", "AttachUserPolicy", "GetSecretValue", "CreateTrail", "DeleteTrail"] },
@@ -20,22 +21,22 @@
     { "name": "UserIdentityUserId", "type": "string" },
     { "name": "ErrorCode", "type": "string", "values": ["", "AccessDenied", "UnauthorizedAccess", "Client.UnauthorizedAccess", "ValidationError", "EntityAlreadyExists", "NoSuchEntity"] },
     { "name": "ErrorMessage", "type": "string", "values": ["", "User: arn:aws:iam::123456789012:user/jsmith is not authorized to perform: iam:CreateUser", "The security token included in the request is expired", "An error occurred (AccessDenied) when calling the PutBucketPolicy operation"] },
-    { "name": "RequestParameters", "type": "dynamic", "values": [
-      {"userName": "newuser", "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"},
-      {"bucketName": "contoso-data-lake", "policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::contoso-data-lake/*\"}]}"},
-      {"instanceType": "t3.medium", "imageId": "ami-0abcdef1234567890", "maxCount": 1, "minCount": 1},
-      {"roleName": "AdminRole", "policyDocument": "{\"Version\":\"2012-10-17\"}"},
-      {"secretId": "prod/db/password"},
-      {"accessKeyId": "AKIAIOSFODNN7EXAMPLE"},
-      {}
+    { "name": "RequestParameters", "type": "string", "values": [
+      "{\"userName\":\"newuser\",\"policyArn\":\"arn:aws:iam::aws:policy/AdministratorAccess\"}",
+      "{\"bucketName\":\"contoso-data-lake\",\"policy\":\"{\\\"Version\\\":\\\"2012-10-17\\\"}\"}",
+      "{\"instanceType\":\"t3.medium\",\"imageId\":\"ami-0abcdef1234567890\",\"maxCount\":1,\"minCount\":1}",
+      "{\"roleName\":\"AdminRole\",\"policyDocument\":\"{\\\"Version\\\":\\\"2012-10-17\\\"}\"}",
+      "{\"secretId\":\"prod/db/password\"}",
+      "{\"accessKeyId\":\"AKIAIOSFODNN7EXAMPLE\"}",
+      "{}"
     ] },
-    { "name": "ResponseElements", "type": "dynamic", "values": [
-      {"user": {"userName": "newuser", "userId": "AIDAJQABLZS4A3QDU576Q", "arn": "arn:aws:iam::123456789012:user/newuser"}},
-      {"instancesSet": {"items": [{"instanceId": "i-0abcdef1234567890", "instanceType": "t3.medium"}]}},
-      {"credentials": {"accessKeyId": "AKIAIOSFODNN7EXAMPLE", "expiration": "2024-01-16T12:00:00Z"}},
-      {"ConsoleLogin": "Success"},
-      {"ConsoleLogin": "Failure"},
-      null
+    { "name": "ResponseElements", "type": "string", "values": [
+      "{\"user\":{\"userName\":\"newuser\",\"userId\":\"AIDAJQABLZS4A3QDU576Q\",\"arn\":\"arn:aws:iam::123456789012:user/newuser\"}}",
+      "{\"instancesSet\":{\"items\":[{\"instanceId\":\"i-0abcdef1234567890\",\"instanceType\":\"t3.medium\"}]}}",
+      "{\"credentials\":{\"accessKeyId\":\"AKIAIOSFODNN7EXAMPLE\",\"expiration\":\"2024-01-16T12:00:00Z\"}}",
+      "{\"ConsoleLogin\":\"Success\"}",
+      "{\"ConsoleLogin\":\"Failure\"}",
+      ""
     ] },
     { "name": "Resources", "type": "string", "values": ["", "arn:aws:s3:::contoso-data-lake", "arn:aws:ec2:us-east-1:123456789012:instance/i-0abcdef1234567890", "arn:aws:iam::123456789012:user/jsmith"] },
     { "name": "ReadOnly", "type": "boolean", "values": [true, false] },

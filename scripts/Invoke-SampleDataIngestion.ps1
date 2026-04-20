@@ -834,9 +834,15 @@ if (-not $Schema -and -not $SampleDataFile) {
 
 $columnDefs = $null
 $sampleData = $null
+$schemaTransformKql = $null
 
 if ($Schema) {
     $columnDefs = Read-SchemaFile -Path $Schema
+    # Check for transformKql in schema file
+    $schemaRaw = Get-Content -Path $Schema -Raw | ConvertFrom-Json
+    if ($schemaRaw.transformKql) {
+        $schemaTransformKql = $schemaRaw.transformKql
+    }
     Write-Host "Loaded schema: $($columnDefs.Count) columns from $Schema" -ForegroundColor Cyan
 }
 
@@ -892,7 +898,7 @@ if ($Deploy) {
     # 3. DCR
     $dcrName = "sampledata-$($TableName -replace '_CL$', '' -replace '[^A-Za-z0-9-]', '-')"
     $dcrResult = New-DcrTemplate -TargetTableName $TableName -WorkspaceResourceId $ws.WorkspaceResourceId `
-        -DceResourceId $dceId -Location $location -ColumnDefinitions $columnDefs
+        -DceResourceId $dceId -Location $location -ColumnDefinitions $columnDefs -TransformKql $schemaTransformKql
     $dcrId = Initialize-Dcr -DcrName $dcrName -SubscriptionId $ws.SubscriptionId `
         -ResourceGroupName $ws.ResourceGroup -Template $dcrResult.Template
     $streamName = $dcrResult.StreamName

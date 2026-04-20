@@ -114,6 +114,18 @@ User provides table/product name  ─OR─  User provides a sample file
 └─ Route to the appropriate scenario workflow below
 
 > **Product name → table discovery:** When the user provides a **product name** (e.g., "Proofpoint TAP") instead of a specific table name, follow the **Product → Table Discovery Strategy** section at the end of this document to find all destination tables, then **ask the user which tables** they want to ingest into before proceeding.
+
+### Product Request Safety Gate (Mandatory)
+
+Before any ingestion command when the request is product-based:
+
+1. Resolve connector destination tables from authoritative sources (Sentinel connector docs, Azure-Sentinel repo connector definition, or Sentinel Ninja connector index).
+2. Compare discovered table names against any local schema files in `schemas/`.
+3. If there is a mismatch, follow discovered connector tables and treat local schema files as non-authoritative until updated.
+4. If there are multiple destination tables, stop and ask the user which table(s) to ingest.
+5. Only run ingestion after the selected table names are explicitly confirmed.
+
+Hard fail rule: never default to a single table just because a similarly named schema file already exists.
 ```
 
 ### Scenario 1 — Existing Table (Built-in or Present in Workspace)

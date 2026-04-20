@@ -22,3 +22,6 @@ This repository contains tools for generating and ingesting sample data into Mic
 5. Always confirm schema with the user before ingesting
 6. For attack scenarios, ensure all table schemas exist before running
 7. Data takes 5–10 minutes to appear in Log Analytics after ingestion
+8. When the user requests ingestion by **product name** (not explicit table name), always do table discovery first using connector documentation (Sentinel docs/GitHub/Sentinel Ninja)
+9. If a product maps to multiple destination tables, do not pick one implicitly — present all valid table options and get explicit user confirmation before ingesting
+10. Never select a table solely because a similarly named local schema file exists; local files are hints, not authority for connector destination table mapping

@@ -1,0 +1,24 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime", "values": [] },
+    { "name": "ClusterId", "type": "string", "values": ["pod-us1", "pod-us2", "pod-eu1"] },
+    { "name": "MessageId", "type": "string", "values": ["<a1b2c3@proofpoint>", "<d4e5f6@proofpoint>", "<g7h8i9@proofpoint>"] },
+    { "name": "Sender", "type": "string", "values": ["sender1@example.com", "billing@fabrikam.com", "alerts@contoso.com", "noreply@woodgrove.com"] },
+    { "name": "Recipient", "type": "string", "values": ["jsmith@contoso.com", "agarcia@contoso.com", "secops@contoso.com", "helpdesk@contoso.com"] },
+    { "name": "EnvelopeFrom", "type": "string", "values": ["bounce@example.com", "mailer@fabrikam.com", "notify@woodgrove.com"] },
+    { "name": "EnvelopeTo", "type": "string", "values": ["jsmith@contoso.com", "mwilson@contoso.com", "lchen@contoso.com"] },
+    { "name": "Subject", "type": "string", "values": ["Invoice Attached", "Password Reset Required", "Weekly Security Report", "Action Needed: Verify Account"] },
+    { "name": "Direction", "type": "string", "values": ["inbound", "outbound", "internal"] },
+    { "name": "Action", "type": "string", "values": ["delivered", "blocked", "quarantined", "bounced"] },
+    { "name": "ThreatStatus", "type": "string", "values": ["clean", "spam", "malicious", "suspect"] },
+    { "name": "ThreatType", "type": "string", "values": ["none", "phish", "malware", "spam"] },
+    { "name": "PolicyRule", "type": "string", "values": ["Default Inbound", "Executive Protection", "Attachment Control", "Domain Spoofing"] },
+    { "name": "SpamScore", "type": "real", "values": [1.2, 3.8, 6.4, 9.1] },
+    { "name": "MessageSizeBytes", "type": "long", "values": [12540, 28917, 74211, 182233] },
+    { "name": "ConnectionTls", "type": "boolean", "values": [true, false] },
+    { "name": "SourceIpAddress", "type": "string", "values": ["198.51.100.17", "203.0.113.42", "52.168.112.66"] },
+    { "name": "RelayHost", "type": "string", "values": ["mx1.proofpoint.com", "mx2.proofpoint.com", "relay.mail.proofpoint.com"] },
+    { "name": "QuarantineFolder", "type": "string", "values": ["Spam", "Malware", "Phish", "None"] },
+    { "name": "SourceSystem", "type": "string", "values": ["Proofpoint POD"] }
+  ]
+}

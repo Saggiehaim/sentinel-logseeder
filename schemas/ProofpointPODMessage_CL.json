@@ -1,0 +1,25 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime", "values": [] },
+    { "name": "ClusterId", "type": "string", "values": ["pod-us1", "pod-us2", "pod-eu1"] },
+    { "name": "EventId", "type": "string", "values": ["msg_evt_001", "msg_evt_002", "msg_evt_003", "msg_evt_004"] },
+    { "name": "EventType", "type": "string", "values": ["message_received", "message_processed", "message_rewritten", "message_released"] },
+    { "name": "MessageId", "type": "string", "values": ["<m1n2o3@proofpoint>", "<p4q5r6@proofpoint>", "<s7t8u9@proofpoint>"] },
+    { "name": "Sender", "type": "string", "values": ["partner@fabrikam.com", "admin@adatum.com", "support@contoso.com"] },
+    { "name": "Recipient", "type": "string", "values": ["pjones@contoso.com", "rsingh@contoso.com", "kbrown@contoso.com", "tnguyen@contoso.com"] },
+    { "name": "Subject", "type": "string", "values": ["Document Review", "MFA Enrollment", "Wire Transfer Request", "Security Alert"] },
+    { "name": "MessageStatus", "type": "string", "values": ["accepted", "rejected", "deferred", "processed"] },
+    { "name": "Disposition", "type": "string", "values": ["delivered", "quarantined", "blocked", "held"] },
+    { "name": "PolicyAction", "type": "string", "values": ["allow", "deny", "tag", "rewrite"] },
+    { "name": "ThreatType", "type": "string", "values": ["none", "phish", "malware", "suspicious_url"] },
+    { "name": "ThreatName", "type": "string", "values": ["none", "Emotet", "Qakbot", "CredentialHarvestKit"] },
+    { "name": "PhishScore", "type": "real", "values": [0.4, 2.1, 5.7, 8.9] },
+    { "name": "AttachmentCount", "type": "long", "values": [0, 1, 2, 3] },
+    { "name": "AttachmentNames", "type": "string", "values": ["none", "invoice.pdf", "update.zip", "statement.docm"] },
+    { "name": "UrlCount", "type": "long", "values": [0, 1, 2, 4] },
+    { "name": "Country", "type": "string", "values": ["US", "GB", "DE", "IN", "CA"] },
+    { "name": "SourceIpAddress", "type": "string", "values": ["198.51.100.17", "203.0.113.45", "100.21.55.130"] },
+    { "name": "Gateway", "type": "string", "values": ["gw-us-west", "gw-us-east", "gw-eu-central"] },
+    { "name": "SourceSystem", "type": "string", "values": ["Proofpoint POD"] }
+  ]
+}

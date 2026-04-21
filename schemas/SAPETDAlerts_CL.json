@@ -1,0 +1,21 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "AlertId", "type": "int" },
+    { "name": "PatternName", "type": "string", "values": ["Login from unexpected network", "Execution of Sensitive Function Module", "Brute Force Attack", "Critical Transaction Execution", "User Master Record Change", "RFC Call from Unusual Source", "Debug Activity in Production", "Transport Release in Production", "Mass Data Download", "Privilege Escalation Attempt"] },
+    { "name": "PatternDescription", "type": "string", "values": ["Login detected from IP address outside the allowed network ranges", "A sensitive function module was executed by an unauthorized user", "Multiple failed login attempts detected for a single user", "A critical transaction was executed outside normal business hours", "A user master record was modified with elevated privileges", "An RFC call was received from an unusual source system"] },
+    { "name": "Status", "type": "string", "values": ["New", "InProgress", "Closed", "Escalated", "FalsePositive"] },
+    { "name": "Score", "type": "int", "values": [95, 85, 75, 60, 45, 30, 20] },
+    { "name": "Threshold", "type": "int", "values": [50, 70, 80, 90] },
+    { "name": "Measure", "type": "int", "values": [1, 3, 5, 10, 25, 50] },
+    { "name": "CreationTimestamp", "type": "datetime" },
+    { "name": "MinTimestamp", "type": "datetime" },
+    { "name": "MaxTimestamp", "type": "datetime" },
+    { "name": "Version", "type": "string", "values": ["1", "2"] },
+    { "name": "NormalizedTriggeringEvents", "type": "dynamic", "values": [
+      [{"timestamp": "2025-01-15T14:22:00Z", "systemId": "PRD", "client": "100", "user": "JSMITH", "ipAddress": "203.0.113.42", "terminalId": "WS-PC01", "transactionCode": "SM37"}],
+      [{"timestamp": "2025-01-15T15:10:00Z", "systemId": "PRD", "client": "100", "user": "ADMIN", "functionModule": "RFC_READ_TABLE", "callingSystem": "DEV"}],
+      [{"timestamp": "2025-01-15T09:00:00Z", "systemId": "PRD", "client": "100", "user": "ATTACKER", "failedAttempts": 25, "ipAddress": "198.51.100.17"}]
+    ] }
+  ]
+}

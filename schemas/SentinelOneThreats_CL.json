@@ -1,0 +1,102 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "AccountId", "type": "string" },
+    { "name": "AccountName", "type": "string", "values": ["Contoso Production", "Contoso Staging", "Contoso Dev"] },
+    { "name": "AgentComputerName", "type": "string" },
+    { "name": "AgentDetectionInfo", "type": "dynamic", "values": [
+      {"accountId": "1234567890", "accountName": "Contoso Production", "agentDomain": "contoso.local", "agentIpV4": "10.0.1.50", "agentLastLoggedInUserName": "jsmith", "agentMitigationMode": "protect", "agentOsName": "Windows 11 Pro", "agentOsRevision": "22631", "agentUuid": "d1a2b3c4-0001-4000-8000-000000000001", "agentVersion": "23.4.1.225", "externalIp": "203.0.113.42", "groupId": "G-001", "groupName": "Workstations", "siteId": "S-001", "siteName": "Default Site"},
+      {"accountId": "1234567890", "accountName": "Contoso Production", "agentDomain": "contoso.local", "agentIpV4": "10.0.2.10", "agentLastLoggedInUserName": "admin", "agentMitigationMode": "protect", "agentOsName": "Windows Server 2022", "agentUuid": "d1a2b3c4-0003-4000-8000-000000000003", "agentVersion": "23.3.2.15", "externalIp": "52.168.112.66", "groupId": "G-003", "groupName": "Domain Controllers", "siteId": "S-001", "siteName": "Default Site"},
+      {"accountId": "1234567890", "accountName": "Contoso Production", "agentDomain": "WORKGROUP", "agentIpV4": "10.0.2.20", "agentLastLoggedInUserName": "root", "agentMitigationMode": "detect", "agentOsName": "Ubuntu 22.04.3 LTS", "agentUuid": "d1a2b3c4-0004-4000-8000-000000000004", "agentVersion": "24.1.1.100", "groupId": "G-005", "groupName": "Linux Servers", "siteId": "S-001", "siteName": "Default Site"}
+    ] },
+    { "name": "AgentDomain", "type": "string", "values": ["contoso.local", "contoso.local", "WORKGROUP", "contoso.com"] },
+    { "name": "AgentId", "type": "string" },
+    { "name": "AgentInfected", "type": "boolean", "values": [true, true, false, true, true] },
+    { "name": "AgentIp", "type": "string" },
+    { "name": "AgentIsActive", "type": "boolean", "values": [true, true, true, true, false] },
+    { "name": "AgentIsDecommissioned", "type": "boolean", "values": [false, false, false, false, false] },
+    { "name": "AgentMachineType", "type": "string", "values": ["desktop", "server", "laptop", "server", "desktop"] },
+    { "name": "AgentNetworkStatus", "type": "string", "values": ["connected", "connected", "disconnected", "connected", "connecting"] },
+    { "name": "AgentOsType", "type": "string", "values": ["windows", "windows", "linux", "macos", "windows"] },
+    { "name": "AgentRealtimeInfo", "type": "dynamic", "values": [
+      {"accountId": "1234567890", "accountName": "Contoso Production", "activeThreats": 1, "agentComputerName": "WS-PC01", "agentDecommissionedAt": null, "agentDomain": "contoso.local", "agentId": "AGT-001", "agentInfected": true, "agentIsActive": true, "agentIsDecommissioned": false, "agentMachineType": "desktop", "agentMitigationMode": "protect", "agentNetworkStatus": "connected", "agentOsName": "Windows 11 Pro", "agentOsRevision": "22631", "agentOsType": "windows", "agentVersion": "23.4.1.225", "groupId": "G-001", "groupName": "Workstations", "networkInterfaces": [{"inet": ["10.0.1.50"], "name": "Ethernet0", "physical": "00:50:56:C0:00:01"}], "operationalState": "na", "rebootRequired": false, "scanAbortedAt": null, "scanFinishedAt": "2025-01-15T06:00:00Z", "scanStartedAt": "2025-01-15T05:00:00Z", "scanStatus": "finished", "siteId": "S-001", "siteName": "Default Site", "userActionsNeeded": []},
+      {"accountId": "1234567890", "accountName": "Contoso Production", "activeThreats": 0, "agentComputerName": "SRV-DC01", "agentDomain": "contoso.local", "agentId": "AGT-003", "agentInfected": false, "agentIsActive": true, "agentMachineType": "server", "agentMitigationMode": "protect", "agentNetworkStatus": "connected", "agentOsType": "windows", "agentVersion": "23.3.2.15", "groupId": "G-003", "groupName": "Domain Controllers", "scanStatus": "finished", "siteId": "S-001", "siteName": "Default Site"}
+    ] },
+    { "name": "AgentVersion", "type": "string", "values": ["23.4.1.225", "23.3.2.15", "24.1.1.100", "24.1.2.50"] },
+    { "name": "AutomaticallyResolved", "type": "boolean", "values": [false, true, false, false, true] },
+    { "name": "CertId", "type": "string", "values": ["", "", "CERT-001", "CERT-002", ""] },
+    { "name": "Classification", "type": "string", "values": ["Malware", "Trojan", "Ransomware", "PUP", "Backdoor", "Downloader", "Infostealer", "Hacking Tool", "Cryptominer", "undefined"] },
+    { "name": "ClassificationSource", "type": "string", "values": ["Engine", "Static", "Cloud", "Engine", "Cloud"] },
+    { "name": "CloudVerdict", "type": "string", "values": ["black", "black", "gray", "white", "provider_unknown", "black"] },
+    { "name": "CollectionId", "type": "string" },
+    { "name": "CreatedAt", "type": "datetime" },
+    { "name": "Engines", "type": "string", "values": [
+      "[\"reputation\"]",
+      "[\"pre_execution\",\"on_write\"]",
+      "[\"on_write\",\"reputation\",\"pre_execution_suspicious\"]",
+      "[\"reputation\",\"user_blacklist\"]",
+      "[\"pre_execution\"]"
+    ] },
+    { "name": "FileContentHash", "type": "string", "values": [
+      "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "3395856ce81f2b7382dee72602f798b642f14140",
+      "2ef7bde608ce5404e97d5f042f95f89f1c232871",
+      "6367c48dd193d56ea7b0baad25b19455e529f5ee",
+      "0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33"
+    ] },
+    { "name": "FileDisplayName", "type": "string", "values": ["payload.exe", "mimikatz.exe", "ransomware.dll", "cryptominer.bin", "trojan_dropper.scr", "invoice_macro.docm", "backdoor.py"] },
+    { "name": "FileExtensionType", "type": "string", "values": ["Executable", "Executable", "Document", "Script", "Archive", "Unknown"] },
+    { "name": "FilePath", "type": "string", "values": [
+      "\\Device\\HarddiskVolume3\\Windows\\Temp\\payload.exe",
+      "\\Device\\HarddiskVolume3\\Users\\admin\\Downloads\\mimikatz.exe",
+      "\\Device\\HarddiskVolume3\\Users\\jsmith\\AppData\\Local\\Temp\\ransomware.dll",
+      "/tmp/cryptominer.bin",
+      "\\Device\\HarddiskVolume3\\Users\\mwilson\\Desktop\\invoice.docm",
+      "/var/tmp/backdoor.py"
+    ] },
+    { "name": "FileSha256", "type": "string", "values": [
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f",
+      "7d865e959b2466918c9863afca942d0fb89d7c9ac0c99bafc3749504ded97730",
+      "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e",
+      "2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae"
+    ] },
+    { "name": "FileVerificationType", "type": "string", "values": ["SignedVerified", "Unsigned", "SignedNotVerified", "Unsigned", "NotSigned"] },
+    { "name": "Id", "type": "string" },
+    { "name": "Indicators", "type": "string", "values": [
+      "[{\"category\":\"General\",\"description\":\"Process spawned from suspicious location\",\"ids\":[1001],\"tactics\":[{\"name\":\"Execution\",\"source\":\"MITRE\",\"techniques\":[{\"link\":\"https://attack.mitre.org/techniques/T1059\",\"name\":\"T1059 - Command and Scripting Interpreter\"}]}]},{\"category\":\"Evasion\",\"description\":\"Encoded PowerShell command detected\",\"ids\":[1002]}]",
+      "[{\"category\":\"Ransomware\",\"description\":\"Mass file encryption detected\",\"ids\":[2001],\"tactics\":[{\"name\":\"Impact\",\"source\":\"MITRE\",\"techniques\":[{\"link\":\"https://attack.mitre.org/techniques/T1486\",\"name\":\"T1486 - Data Encrypted for Impact\"}]}]}]",
+      "[{\"category\":\"InfoStealer\",\"description\":\"Credential harvesting tool detected\",\"ids\":[3001]}]",
+      "[]"
+    ] },
+    { "name": "InitiatedBy", "type": "string", "values": ["agent_policy", "cloud_detection", "full_disk_scan", "on_demand_scan", "star", "console_api", "dv_command"] },
+    { "name": "InitiatedByDescription", "type": "string", "values": [
+      "Agent Policy - Threat detected by the SentinelOne agent",
+      "Cloud Detection - Threat identified by cloud analysis",
+      "Full Disk Scan - Threat found during scheduled scan",
+      "On Demand Scan - Threat found during manual scan",
+      "STAR - Threat detected by custom detection rule"
+    ] },
+    { "name": "InitiatingUserId", "type": "string" },
+    { "name": "IsCertValid", "type": "boolean", "values": [false, false, true, false, false] },
+    { "name": "MitigationMode", "type": "string", "values": ["protect", "protect", "detect", "protect", "detect"] },
+    { "name": "MitigationReport", "type": "string", "values": [
+      "{\"kill\":{\"status\":\"success\"},\"network_quarantine\":{\"status\":\"not_reported\"},\"quarantine\":{\"status\":\"success\"},\"remediate\":{\"status\":\"success\"},\"rollback\":{\"status\":\"not_reported\"}}",
+      "{\"kill\":{\"status\":\"success\"},\"quarantine\":{\"status\":\"success\"},\"remediate\":{\"status\":\"success\"}}",
+      "{\"kill\":{\"status\":\"not_reported\"},\"quarantine\":{\"status\":\"not_reported\"}}"
+    ] },
+    { "name": "MitigationStatus", "type": "string", "values": ["mitigated", "mitigated", "not_mitigated", "active", "marked_as_benign", "mitigated"] },
+    { "name": "ProcessArguments", "type": "string", "values": ["-EncodedCommand SQBFAFgA...", "/c whoami /priv", "privilege::debug sekurlsa::logonpasswords", "--connect 198.51.100.17:4444", ""] },
+    { "name": "SiteId", "type": "string" },
+    { "name": "SiteName", "type": "string", "values": ["Default Site", "Production", "Development", "Staging"] },
+    { "name": "ThreatInfo", "type": "dynamic", "values": [
+      {"analystVerdict": "true_positive", "analystVerdictDescription": "True positive", "automaticallyResolved": false, "browserType": "N/A", "certificateId": "", "classification": "Malware", "classificationSource": "Engine", "cloudVerdict": "black", "collectionId": "COL-001", "confidenceLevel": "malicious", "createdAt": "2025-01-15T14:22:00Z", "detectionEngines": [{"key": "reputation", "title": "Reputation"}], "engines": ["reputation"], "externalTicketExists": false, "externalTicketId": "", "failedActions": false, "fileExtensionType": "Executable", "filePath": "\\Device\\HarddiskVolume3\\Windows\\Temp\\payload.exe", "fileSize": 245760, "fileVerificationType": "Unsigned", "identifiedAt": "2025-01-15T14:22:00Z", "incidentStatus": "resolved", "incidentStatusDescription": "Resolved", "initiatedBy": "agent_policy", "initiatedByDescription": "Agent Policy", "isFileless": false, "isValidCertificate": false, "mitigatedPreemptively": false, "mitigationStatus": "mitigated", "mitigationStatusDescription": "Mitigated", "originatorProcess": "explorer.exe", "processUser": "contoso\\jsmith", "publisherName": "", "reachedEventsLimit": false, "rebootRequired": false, "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709", "storyline": "STR-T-001", "threatId": "THR-10001", "threatName": "payload.exe", "updatedAt": "2025-01-15T15:00:00Z"},
+      {"analystVerdict": "undefined", "classification": "Ransomware", "classificationSource": "Cloud", "cloudVerdict": "black", "confidenceLevel": "malicious", "detectionEngines": [{"key": "pre_execution", "title": "Pre Execution"}], "engines": ["pre_execution"], "fileExtensionType": "Executable", "filePath": "\\Device\\HarddiskVolume3\\Users\\mwilson\\AppData\\Temp\\encrypt.exe", "fileVerificationType": "Unsigned", "incidentStatus": "unresolved", "initiatedBy": "cloud_detection", "isFileless": false, "mitigationStatus": "not_mitigated", "processUser": "contoso\\mwilson", "sha1": "3395856ce81f2b7382dee72602f798b642f14140", "threatId": "THR-10002", "threatName": "encrypt.exe"},
+      {"analystVerdict": "false_positive", "classification": "PUP", "classificationSource": "Static", "cloudVerdict": "gray", "confidenceLevel": "suspicious", "incidentStatus": "resolved", "initiatedBy": "full_disk_scan", "mitigationStatus": "marked_as_benign", "threatId": "THR-10003", "threatName": "toolbar_installer.exe"}
+    ] },
+    { "name": "ThreatName", "type": "string", "values": ["payload.exe", "mimikatz.exe", "ransomware.dll", "cryptominer.bin", "trojan_dropper.scr", "backdoor.py", "invoice_macro.docm", "encrypt.exe"] },
+    { "name": "UpdatedAt", "type": "datetime" },
+    { "name": "Username", "type": "string" },
+    { "name": "WhiteningOptions", "type": "string", "values": ["[\"hash\",\"path\",\"certificate\",\"browser\"]", "[\"hash\",\"path\"]", "[\"hash\"]", "[]"] }
+  ]
+}

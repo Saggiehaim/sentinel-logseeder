@@ -1,0 +1,34 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Timestamp", "type": "datetime" },
+    { "name": "InsertId", "type": "string" },
+    { "name": "LogName", "type": "string", "values": ["projects/contoso-prod-123/logs/requests"] },
+    { "name": "Severity", "type": "string", "values": ["DEFAULT", "INFO", "NOTICE", "WARNING", "ERROR", "INFO", "INFO"] },
+    { "name": "ProjectId", "type": "string", "values": ["contoso-prod-123", "contoso-staging-456"] },
+    { "name": "Zone", "type": "string", "values": ["us-central1-a", "us-central1-b", "us-east1-b", "europe-west1-b", "asia-east1-a"] },
+    { "name": "RemoteIp", "type": "string" },
+    { "name": "PayloadRemoteIp", "type": "string" },
+    { "name": "RequestMethod", "type": "string", "values": ["GET", "GET", "POST", "PUT", "DELETE", "HEAD", "GET"] },
+    { "name": "RequestUrl", "type": "string" },
+    { "name": "RequestStatus", "type": "string", "values": ["200", "200", "301", "403", "404", "500", "502", "503", "200"] },
+    { "name": "RequestSize", "type": "string", "values": ["128", "512", "1024", "4096", "256"] },
+    { "name": "UserAgent", "type": "string", "values": ["Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0", "GoogleHC/1.0", "python-requests/2.31.0", "curl/7.88.1"] },
+    { "name": "Latency", "type": "string", "values": ["0.005s", "0.023s", "0.053s", "0.150s", "0.500s", "1.200s", "5.000s"] },
+    { "name": "StatusDetails", "type": "string", "values": ["response_sent_by_backend", "response_sent_by_backend", "backend_timeout", "backend_connection_closed", "response_code_set_by_backend", ""] },
+    { "name": "BackendServiceName", "type": "string", "values": ["contoso-web-backend", "contoso-api-backend", "contoso-static-backend", ""] },
+    { "name": "ForwardingRuleName", "type": "string", "values": ["contoso-https-rule", "contoso-http-redirect", ""] },
+    { "name": "UrlMapName", "type": "string", "values": ["contoso-url-map", ""] },
+    { "name": "BackendTargetProjectNumber", "type": "string" },
+    { "name": "CacheDecision", "type": "dynamic", "values": [["RESPONSE_HAS_CONTENT_TYPE"], ["REQUEST_HAS_AUTHORIZATION"], []] },
+    { "name": "EnforcedSecurityPolicy", "type": "dynamic", "values": [
+      {"name": "contoso-waf-policy", "priority": 1000, "configuredAction": "ALLOW", "outcome": "ACCEPT"},
+      {"name": "contoso-waf-policy", "priority": 2000, "configuredAction": "DENY", "outcome": "DENY", "matchedRules": [{"matchType": "SQL_INJECTION", "action": "DENY"}]},
+      {}
+    ] },
+    { "name": "PreviewSecurityPolicy", "type": "dynamic", "values": [{}, {}] },
+    { "name": "EnforcedEdgeSecurityPolicy", "type": "dynamic", "values": [{}, {}] },
+    { "name": "PreviewEdgeSecurityPolicy", "type": "dynamic", "values": [{}, {}] },
+    { "name": "SecurityPolicyRequestData", "type": "dynamic", "values": [{}, {}] }
+  ]
+}

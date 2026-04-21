@@ -1,0 +1,31 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Id", "type": "string" },
+    { "name": "CorrelationId", "type": "string" },
+    { "name": "RecordedAt", "type": "datetime" },
+    { "name": "CreatedAt", "type": "datetime" },
+    { "name": "InternalCorrelationSessionId", "type": "string" },
+    { "name": "ClientId", "type": "string" },
+    { "name": "ClientName", "type": "string", "values": ["PingOne Admin Console", "Contoso Web App", "Contoso Mobile App", "PingOne API", "DaVinci Flow"] },
+    { "name": "ClientType", "type": "string", "values": ["WEB_APP", "NATIVE_APP", "WORKER", "SINGLE_PAGE_APP", ""] },
+    { "name": "UserId", "type": "string" },
+    { "name": "UserName", "type": "string" },
+    { "name": "UserEnvironmentId", "type": "string" },
+    { "name": "UserPopulationId", "type": "string" },
+    { "name": "UserType", "type": "string", "values": ["EXTERNAL", "ADMIN", "SYSTEM"] },
+    { "name": "SourceUserAgent", "type": "string", "values": ["Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Safari/605.1.15", "PingOne SDK/2.0", "okhttp/4.12.0"] },
+    { "name": "SourceIpAddress", "type": "string" },
+    { "name": "ActionType", "type": "string", "values": ["USER.CREATED", "USER.UPDATED", "USER.DELETED", "USER.ACCESS_ALLOWED", "USER.ACCESS_DENIED", "USER.MFA_ENROLLMENT_COMPLETED", "USER.MFA_VERIFICATION_SUCCESS", "USER.MFA_VERIFICATION_FAILED", "USER.PASSWORD_CHANGED", "USER.PASSWORD_RESET", "PASSWORD_POLICY.CREATED", "PASSWORD_POLICY.UPDATED", "APPLICATION.CREATED", "APPLICATION.UPDATED", "APPLICATION.DELETED", "APPLICATION.ACCESS_GRANTED", "APPLICATION.ACCESS_REVOKED", "GROUP.CREATED", "GROUP.UPDATED", "GROUP.DELETED", "GROUP.MEMBER_ADDED", "GROUP.MEMBER_REMOVED", "IDENTITY_PROVIDER.CREATED", "FLOW.EXECUTED", "ROLE.ASSIGNED", "ROLE.UNASSIGNED"] },
+    { "name": "ActionDescription", "type": "string", "values": ["User created", "User updated", "User deleted", "User access allowed", "User access denied", "MFA enrollment completed", "MFA verification succeeded", "MFA verification failed", "Password changed", "Password reset", "Application created", "Application updated", "Group member added", "Role assigned", "Flow executed"] },
+    { "name": "Resources", "type": "dynamic", "values": [
+      [{"id": "USR-001", "name": "jsmith@contoso.com", "type": "USER"}],
+      [{"id": "APP-001", "name": "Contoso Web App", "type": "APPLICATION"}],
+      [{"id": "GRP-001", "name": "Engineering", "type": "GROUP"}, {"id": "USR-002", "name": "agarcia@contoso.com", "type": "USER"}],
+      [{"id": "POLICY-001", "name": "Default MFA Policy", "type": "MFA_POLICY"}],
+      []
+    ] },
+    { "name": "ResultStatus", "type": "string", "values": ["SUCCESS", "FAILURE", "SUCCESS", "SUCCESS", "FAILURE"] },
+    { "name": "ResultDescription", "type": "string", "values": ["", "Invalid credentials", "Account locked", "MFA timeout", ""] }
+  ]
+}

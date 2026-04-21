@@ -1,0 +1,44 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "EventCreationTime", "type": "long" },
+    { "name": "CreationDate", "type": "long" },
+    { "name": "EventProduct", "type": "string", "values": ["Confluence"] },
+    { "name": "EventVendor", "type": "string", "values": ["Atlassian"] },
+    { "name": "EventCategoryType", "type": "string", "values": ["Logins", "Users and groups", "Spaces", "Permissions", "Administration", "Content"] },
+    { "name": "EventMessage", "type": "string", "values": ["User logged in", "User created", "Space created", "Page created", "Permission granted", "Page exported", "Group membership changed", "Space permission changed", "Global permission updated", "User deactivated", "Attachment uploaded"] },
+    { "name": "Summary", "type": "string", "values": ["User logged in", "User created", "Space created", "Page created", "Permission granted", "Page exported"] },
+    { "name": "Description", "type": "string", "values": ["", "New user account created for mwilson@contoso.com", "New space 'Engineering' created", "Page 'Architecture Decision Records' created in Engineering space", ""] },
+    { "name": "Category", "type": "string", "values": ["Logins", "Users and groups", "Spaces", "Permissions", "Administration", "Content"] },
+    { "name": "AuthorAccountId", "type": "string" },
+    { "name": "AuthorDisplayName", "type": "string" },
+    { "name": "AuthorAccountType", "type": "string", "values": ["atlassian", "app", "customer"] },
+    { "name": "AuthorType", "type": "string", "values": ["user", "anonymous", "app"] },
+    { "name": "AuthorUsername", "type": "string" },
+    { "name": "AuthorPublicName", "type": "string" },
+    { "name": "AuthorUserKey", "type": "string" },
+    { "name": "AuthorExternalCollaborator", "type": "boolean", "values": [false, false, true, false] },
+    { "name": "AuthorIsExternalCollaborator", "type": "boolean", "values": [false, false, true, false] },
+    { "name": "SrcIpAddr", "type": "string" },
+    { "name": "SrcUserName", "type": "string" },
+    { "name": "RemoteAddress", "type": "string" },
+    { "name": "DstUserSid", "type": "string" },
+    { "name": "UserIdentity", "type": "string" },
+    { "name": "SuperAdmin", "type": "boolean", "values": [false, true, false, false] },
+    { "name": "SysAdmin", "type": "boolean", "values": [false, true, false, false] },
+    { "name": "AffectedObjectName", "type": "string", "values": ["Engineering", "jsmith@contoso.com", "Architecture Decision Records", "Developers Group", "Global Permissions", ""] },
+    { "name": "AffectedObjectObjectType", "type": "string", "values": ["Space", "User", "Page", "Group", "Permission", ""] },
+    { "name": "AssociatedObjects", "type": "dynamic", "values": [
+      [{"name": "Engineering", "objectType": "Space"}],
+      [{"name": "jsmith@contoso.com", "objectType": "User"}, {"name": "Developers", "objectType": "Group"}],
+      [],
+      []
+    ] },
+    { "name": "ChangedValues", "type": "dynamic", "values": [
+      [{"name": "Permission", "oldValue": "", "newValue": "read"}],
+      [{"name": "Status", "oldValue": "active", "newValue": "deactivated"}],
+      [],
+      []
+    ] }
+  ]
+}

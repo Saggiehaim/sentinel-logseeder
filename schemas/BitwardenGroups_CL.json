@@ -1,0 +1,7 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "groupId", "type": "string" },
+    { "name": "name", "type": "string", "values": ["Engineering", "DevOps", "Security", "Finance", "HR", "IT Admins", "Executives", "All Users", "External Contractors", "SOC Team"] }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "EventType", "type": "string", "values": ["Login", "Logout", "LoginAs", "URI", "API", "RestApi", "BulkApi", "ApexExecution", "LightningInteraction", "Report", "Dashboard"] },
+    { "name": "Action", "type": "string", "values": ["Login", "Logout", "Query", "Insert", "Update", "Delete", "Undelete", "LoginAs", "PasswordReset", "ApiAnomalyEvent"] },
+    { "name": "ApiType", "type": "string", "values": ["SOAP Enterprise", "REST", "Bulk API", "Metadata", "Streaming", ""] },
+    { "name": "ApiVersion", "type": "string", "values": ["55.0", "56.0", "57.0", "58.0", "59.0"] },
+    { "name": "LoginStatus", "type": "string", "values": ["LOGIN_NO_ERROR", "LOGIN_FAILED", "LOGIN_LOCKOUT", "LOGIN_CHALLENGE_REQUIRED", "LOGIN_VIA_SSO", ""] },
+    { "name": "HttpMethod", "type": "string", "values": ["GET", "POST", "PUT", "DELETE", "PATCH", ""] },
+    { "name": "StatusCode", "type": "string", "values": ["200", "201", "400", "401", "403", "404", "500", ""] },
+    { "name": "UserType", "type": "string", "values": ["Standard", "PowerPartner", "CSPLitePortal", "Guest", "CsnOnly", ""] },
+    { "name": "SessionType", "type": "string", "values": ["UI", "API", "Oauth2", "SubstituteUser", ""] },
+    { "name": "OperationType", "type": "string", "values": ["Insert", "Update", "Delete", "Query", "Undelete", ""] },
+    { "name": "BrowserName", "type": "string", "values": ["Chrome", "Firefox", "Safari", "Edge", ""] },
+    { "name": "OsName", "type": "string", "values": ["Windows", "macOS", "Linux", "iOS", "Android", ""] },
+    { "name": "PlatformType", "type": "string", "values": ["Desktop", "Mobile", "Tablet", ""] },
+    { "name": "TlsProtocol", "type": "string", "values": ["TLSv1.2", "TLSv1.3", ""] }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "MessageUuid", "type": "string" },
+    { "name": "Category", "type": "string", "values": ["audit.security-events", "audit.configuration", "audit.data-access", "audit.data-modification"] },
+    { "name": "UserName", "type": "string" },
+    { "name": "AlsServiceId", "type": "string" },
+    { "name": "OrgId", "type": "string" },
+    { "name": "SpaceId", "type": "string" },
+    { "name": "SubaccountName", "type": "string", "values": ["contoso-prod", "contoso-dev", "contoso-staging"] },
+    { "name": "Tenant", "type": "string", "values": ["contoso"] },
+    { "name": "UpdatedOn", "type": "datetime" },
+    { "name": "Message", "type": "dynamic", "values": [
+      {"uuid": "MSG-001", "time": "2025-01-15T14:22:00Z", "tenant": "contoso", "org_id": "ORG-001", "space_id": "SPC-001", "category": "audit.security-events", "identifier": {"type": "email", "value": "jsmith@contoso.com"}, "initiator": {"id": {"type": "email", "value": "jsmith@contoso.com"}, "ip": "10.0.1.50"}, "object": {"type": "subaccount", "id": {"serviceInstanceId": "SVC-001"}}, "data_subject": {}, "attributes": [{"name": "action", "old": "", "new": "Login successful"}], "success": true},
+      {"uuid": "MSG-002", "time": "2025-01-15T15:10:00Z", "tenant": "contoso", "category": "audit.configuration", "identifier": {"type": "email", "value": "admin@contoso.com"}, "initiator": {"id": {"type": "email", "value": "admin@contoso.com"}, "ip": "10.0.2.10"}, "object": {"type": "role-collection", "id": {"name": "Subaccount Administrator"}}, "attributes": [{"name": "members", "old": "[]", "new": "[\"mwilson@contoso.com\"]"}], "success": true},
+      {"uuid": "MSG-003", "time": "2025-01-15T09:45:00Z", "tenant": "contoso", "category": "audit.data-access", "identifier": {"type": "service", "value": "xsuaa"}, "object": {"type": "security-settings"}, "success": true},
+      {"uuid": "MSG-004", "time": "2025-01-15T20:30:00Z", "tenant": "contoso", "category": "audit.security-events", "identifier": {"type": "email", "value": "unknown@external.com"}, "initiator": {"ip": "203.0.113.42"}, "attributes": [{"name": "action", "old": "", "new": "Login failed"}], "success": false}
+    ] }
+  ]
+}

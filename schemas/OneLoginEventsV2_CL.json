@@ -1,0 +1,23 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "EventId", "type": "real" },
+    { "name": "EventTypeId", "type": "real", "values": [5, 6, 8, 10, 11, 12, 13, 14, 50, 51, 52, 53, 54, 100, 101, 102, 103, 110, 120, 130] },
+    { "name": "AccountId", "type": "real" },
+    { "name": "ActorUserId", "type": "real" },
+    { "name": "ActorUserName", "type": "string" },
+    { "name": "ActorSystem", "type": "string", "values": ["", "OneLogin", "SCIM", "API", ""] },
+    { "name": "UserId", "type": "real" },
+    { "name": "UserName", "type": "string" },
+    { "name": "AppId", "type": "real" },
+    { "name": "AppName", "type": "string", "values": ["Contoso Web App", "Salesforce", "AWS Console", "Slack", "Microsoft 365", "GitHub", "Jira", "Confluence", ""] },
+    { "name": "Ipaddr", "type": "string" },
+    { "name": "CustomMessage", "type": "string", "values": ["User logged into Contoso Web App", "Failed login attempt - incorrect password", "User provisioned via SCIM", "MFA challenge - Push approved", "Password reset requested", "Role assigned: Admin", "App access revoked", "Session expired", "User deactivated", ""] },
+    { "name": "Notes", "type": "string", "values": ["", "3 failed attempts in 5 minutes", "Provisioned from Azure AD", "", ""] },
+    { "name": "PolicyId", "type": "real" },
+    { "name": "PolicyName", "type": "string", "values": ["Default Security Policy", "MFA Required", "IP Restriction", "Adaptive Auth", ""] },
+    { "name": "PolicyType", "type": "string", "values": ["user", "app", "mfa", ""] },
+    { "name": "RoleId", "type": "real" },
+    { "name": "RoleName", "type": "string", "values": ["Admin", "User", "Super Admin", "Help Desk", ""] }
+  ]
+}

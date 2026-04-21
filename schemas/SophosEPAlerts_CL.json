@@ -1,0 +1,31 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Created", "type": "datetime" },
+    { "name": "EventEndTime", "type": "datetime" },
+    { "name": "EventOriginalUid", "type": "string" },
+    { "name": "EventProduct", "type": "string", "values": ["Sophos Endpoint Protection"] },
+    { "name": "EventVendor", "type": "string", "values": ["Sophos"] },
+    { "name": "EventType", "type": "string", "values": ["Event::Endpoint::Threat::CleanedUp", "Event::Endpoint::Threat::Detected", "Event::Endpoint::Threat::PuaDetected", "Event::Endpoint::CorePuaDetection", "Event::Endpoint::Threat::CommandAndControl", "Event::Endpoint::HIPSThreat", "Event::Endpoint::WebFiltering::Blocked", "Event::Endpoint::DataLossPreventionUserAllowed", "Event::Endpoint::Registered", "Event::Firewall::FirewallGatewayDown"] },
+    { "name": "EventSeverity", "type": "string", "values": ["low", "medium", "high", "critical", "low", "medium"] },
+    { "name": "CustomerId", "type": "string" },
+    { "name": "DvcHostname", "type": "string" },
+    { "name": "DvcAction", "type": "string", "values": ["cleaned_up", "not_cleaned_up", "blocked", "allowed", "partially_cleaned_up", ""] },
+    { "name": "Source", "type": "string", "values": ["Endpoint", "Server", "Firewall", "Email", ""] },
+    { "name": "ThreatName", "type": "string", "values": ["Troj/Agent-ABC", "Mal/Generic-S", "PUA/InstallCore", "C2/Cobalt-A", "AMSI/Exec-A", "Troj/Ransom-XYZ", ""] },
+    { "name": "threat_cleanable", "type": "boolean", "values": [true, false, true, false, true] },
+    { "name": "description", "type": "string", "values": ["Threat 'Troj/Agent-ABC' detected in 'C:\\Windows\\Temp\\payload.exe'", "Malware cleaned up on endpoint WS-PC01", "PUA detected: InstallCore bundled installer", "C2 communication blocked to 203.0.113.42", "Web filtering blocked access to malicious URL", "Ransomware behavior detected and blocked"] },
+    { "name": "data", "type": "dynamic", "values": [
+      {"endpoint_type": "computer", "endpoint_id": "EP-001", "threat": "Troj/Agent-ABC", "source_info": {"ip": "10.0.1.50"}},
+      {"endpoint_type": "server", "endpoint_id": "EP-003", "threat": "Mal/Generic-S"},
+      {"endpoint_type": "computer", "alert_id": "ALR-001", "core_remedy_items": {"totalItems": 1, "items": [{"path": "C:\\Windows\\Temp\\payload.exe", "type": "file"}]}},
+      {}
+    ] },
+    { "name": "info", "type": "dynamic", "values": [
+      {"origin": "MLGeneric", "local_rep": "suspicious"},
+      {"origin": "CryptoGuard", "local_rep": "malicious"},
+      {},
+      {}
+    ] }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "UserAttributesId", "type": "real" },
+    { "name": "UserAttributesUsername", "type": "string" },
+    { "name": "UserAttributesEmail", "type": "string" },
+    { "name": "UserAttributesFirstname", "type": "string" },
+    { "name": "UserAttributesLastname", "type": "string" },
+    { "name": "UserAttributesOpenidName", "type": "string" },
+    { "name": "UserAttributesDepartment", "type": "string", "values": ["Engineering", "Security", "IT", "Finance", "HR", "Sales", "Marketing", "Operations", "Legal", "Executive"] },
+    { "name": "UserAttributesTitle", "type": "string", "values": ["Software Engineer", "Security Analyst", "IT Administrator", "Financial Analyst", "HR Manager", "Account Executive", "DevOps Engineer", "Data Scientist", "Product Manager", "Director of Engineering"] }
+  ]
+}

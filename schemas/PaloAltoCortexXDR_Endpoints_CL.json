@@ -1,0 +1,32 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "AgentId", "type": "string" },
+    { "name": "AgentStatus", "type": "string", "values": ["CONNECTED", "CONNECTED", "CONNECTED", "DISCONNECTED", "CONNECTED", "LOST", "CONNECTED"] },
+    { "name": "AgentType", "type": "string", "values": ["AGENT_TYPE_WORKSTATION", "AGENT_TYPE_SERVER", "AGENT_TYPE_DOMAIN_CONTROLLER", "AGENT_TYPE_VDI", "AGENT_TYPE_WORKSTATION"] },
+    { "name": "HostName", "type": "string" },
+    { "name": "IpAddress", "type": "dynamic", "values": [
+      ["10.0.1.50"],
+      ["10.0.2.10"],
+      ["10.0.1.51", "172.16.0.100"],
+      ["10.0.2.20"],
+      ["192.168.1.200"]
+    ] },
+    { "name": "LastSeen", "type": "datetime" },
+    { "name": "OperationalStatus", "type": "string", "values": ["PROTECTED", "PROTECTED", "PARTIALLY_PROTECTED", "PROTECTED", "UNPROTECTED", "PROTECTED"] },
+    { "name": "Tags", "type": "dynamic", "values": [
+      ["Workstation", "Windows"],
+      ["Server", "Domain Controller", "Critical"],
+      ["Server", "Linux", "Web"],
+      [],
+      ["VDI", "Non-persistent"]
+    ] },
+    { "name": "Users", "type": "dynamic", "values": [
+      ["contoso\\jsmith"],
+      ["contoso\\admin"],
+      ["contoso\\agarcia", "contoso\\mwilson"],
+      ["root"],
+      ["contoso\\lchen"]
+    ] }
+  ]
+}

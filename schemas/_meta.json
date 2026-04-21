@@ -14,8 +14,10 @@
       "officialTables": [
         "OnePasswordEventLogs_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "OnePasswordEventLogs_CL"
+      ]
     },
     {
       "name": "1Password (using Azure Functions)",
@@ -26,8 +28,10 @@
       "officialTables": [
         "OnePasswordEventLogs_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "OnePasswordEventLogs_CL"
+      ]
     },
     {
       "name": "Alibaba Cloud ActionTrail (via Codeless Connector Framework)",
@@ -38,8 +42,10 @@
       "officialTables": [
         "AliCloudActionTrailLogs_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "AliCloudActionTrailLogs_CL"
+      ]
     },
     {
       "name": "Amazon Web Services",
@@ -64,8 +70,10 @@
       "officialTables": [
         "AWSCloudFront_AccessLog_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "AWSCloudFront_AccessLog_CL"
+      ]
     },
     {
       "name": "Amazon Web Services NetworkFirewall (via Codeless Connector Framework)",
@@ -138,8 +146,10 @@
       "officialTables": [
         "ConfluenceAuditLogs_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "ConfluenceAuditLogs_CL"
+      ]
     },
     {
       "name": "Atlassian Jira Audit (via Codeless Connector Framework)",
@@ -150,8 +160,10 @@
       "officialTables": [
         "Jira_Audit_v2_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "Jira_Audit_v2_CL"
+      ]
     },
     {
       "name": "Auth0 Logs(via Codeless Connector Framework)",
@@ -162,8 +174,10 @@
       "officialTables": [
         "Auth0Logs_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "Auth0Logs_CL"
+      ]
     },
     {
       "name": "Automated Logic WebCTRL",
@@ -228,8 +242,10 @@
       "officialTables": [
         "ADOAuditLogs_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "ADOAuditLogs_CL"
+      ]
     },
     {
       "name": "Azure Firewall",
@@ -300,8 +316,10 @@
       "officialTables": [
         "BoxEventsV2_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "BoxEventsV2_CL"
+      ]
     },
     {
       "name": "Check Point CloudGuard CNAPP Connector for Microsoft Sentinel",
@@ -397,8 +415,11 @@
         "CiscoSecureEndpointAuditLogsV2_CL",
         "CiscoSecureEndpointEventsV2_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "CiscoSecureEndpointAuditLogsV2_CL",
+        "CiscoSecureEndpointEventsV2_CL"
+      ]
     },
     {
       "name": "Cisco Software Defined WAN",
@@ -449,8 +470,10 @@
       "officialTables": [
         "CloudflareV2_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "CloudflareV2_CL"
+      ]
     },
     {
       "name": "Cognni",
@@ -632,8 +655,15 @@
         "CyfirmaASDomainIPVulnerabilityAlerts_CL",
         "CyfirmaASOpenPortsAlerts_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "CyfirmaASCertificatesAlerts_CL",
+        "CyfirmaASCloudWeaknessAlerts_CL",
+        "CyfirmaASConfigurationAlerts_CL",
+        "CyfirmaASDomainIPReputationAlerts_CL",
+        "CyfirmaASDomainIPVulnerabilityAlerts_CL",
+        "CyfirmaASOpenPortsAlerts_CL"
+      ]
     },
     {
       "name": "CYFIRMA Brand Intelligence",
@@ -648,8 +678,14 @@
         "CyfirmaBIProductSolutionAlerts_CL",
         "CyfirmaBISocialHandlersAlerts_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "CyfirmaBIDomainITAssetAlerts_CL",
+        "CyfirmaBIExecutivePeopleAlerts_CL",
+        "CyfirmaBIMaliciousMobileAppsAlerts_CL",
+        "CyfirmaBIProductSolutionAlerts_CL",
+        "CyfirmaBISocialHandlersAlerts_CL"
+      ]
     },
     {
       "name": "CYFIRMA Compromised Accounts",
@@ -660,8 +696,10 @@
       "officialTables": [
         "CyfirmaCompromisedAccounts_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "CyfirmaCompromisedAccounts_CL"
+      ]
     },
     {
       "name": "CYFIRMA Cyber Intelligence",
@@ -675,8 +713,13 @@
         "CyfirmaMalware_CL",
         "CyfirmaThreatActors_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "CyfirmaCampaigns_CL",
+        "CyfirmaIndicators_CL",
+        "CyfirmaMalware_CL",
+        "CyfirmaThreatActors_CL"
+      ]
     },
     {
       "name": "CYFIRMA Digital Risk",
@@ -693,8 +736,16 @@
         "CyfirmaSPESocialThreatAlerts_CL",
         "CyfirmaSPESourceCodeAlerts_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "CyfirmaDBWMDarkWebAlerts_CL",
+        "CyfirmaDBWMPhishingAlerts_CL",
+        "CyfirmaDBWMRansomwareAlerts_CL",
+        "CyfirmaSPEConfidentialFilesAlerts_CL",
+        "CyfirmaSPEPIIAndCIIAlerts_CL",
+        "CyfirmaSPESocialThreatAlerts_CL",
+        "CyfirmaSPESourceCodeAlerts_CL"
+      ]
     },
     {
       "name": "CYFIRMA Vulnerabilities Intelligence",
@@ -705,8 +756,10 @@
       "officialTables": [
         "CyfirmaVulnerabilities_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "CyfirmaVulnerabilities_CL"
+      ]
     },
     {
       "name": "Darktrace Connector for Microsoft Sentinel REST API",
@@ -804,8 +857,10 @@
       "officialTables": [
         "FinanceOperationsActivity_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "FinanceOperationsActivity_CL"
+      ]
     },
     {
       "name": "Dynamics365",
@@ -943,8 +998,10 @@
       "officialTables": [
         "GCPLoadBalancerLogs_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "GCPLoadBalancerLogs_CL"
+      ]
     },
     {
       "name": "GCP Pub/Sub VPC Flow Logs (via Codeless Connector Framework)",
@@ -1338,8 +1395,10 @@
       "officialTables": [
         "LookoutMtdV2_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "LookoutMtdV2_CL"
+      ]
     },
     {
       "name": "Luminar IOCs and Leaked Credentials (using Azure Functions)",
@@ -1721,8 +1780,10 @@
       "officialTables": [
         "NetskopeAlerts_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "NetskopeAlerts_CL"
+      ]
     },
     {
       "name": "Netskope Web Transaction Connector (via Blob Storage)",
@@ -1770,8 +1831,11 @@
         "OneLoginEventsV2_CL",
         "OneLoginUsersV2_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "OneLoginEventsV2_CL",
+        "OneLoginUsersV2_CL"
+      ]
     },
     {
       "name": "OneTrust",
@@ -1806,8 +1870,10 @@
       "officialTables": [
         "OCI_LogsV2_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "OCI_LogsV2_CL"
+      ]
     },
     {
       "name": "Orca Security Alerts",
@@ -1834,8 +1900,14 @@
         "PaloAltoCortexXDR_Endpoints_CL",
         "PaloAltoCortexXDR_Incidents_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "PaloAltoCortexXDR_Alerts_CL",
+        "PaloAltoCortexXDR_Audit_Agent_CL",
+        "PaloAltoCortexXDR_Audit_Management_CL",
+        "PaloAltoCortexXDR_Endpoints_CL",
+        "PaloAltoCortexXDR_Incidents_CL"
+      ]
     },
     {
       "name": "Palo Alto Cortex Xpanse (via Codeless Connector Framework)",
@@ -1896,8 +1968,10 @@
       "officialTables": [
         "PingOne_AuditActivitiesV2_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "PingOne_AuditActivitiesV2_CL"
+      ]
     },
     {
       "name": "Premium Microsoft Defender Threat Intelligence",
@@ -1984,8 +2058,10 @@
       "officialTables": [
         "QualysHostDetectionV3_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "QualysHostDetectionV3_CL"
+      ]
     },
     {
       "name": "Rubrik Security Cloud data connector (using Azure Functions)",
@@ -2023,8 +2099,10 @@
       "officialTables": [
         "SalesforceServiceCloudV2_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "SalesforceServiceCloudV2_CL"
+      ]
     },
     {
       "name": "Samsung Knox Asset Intelligence",
@@ -2047,8 +2125,10 @@
       "officialTables": [
         "SAPBTPAuditLog_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "SAPBTPAuditLog_CL"
+      ]
     },
     {
       "name": "SAP Enterprise Threat Detection, cloud edition",
@@ -2060,8 +2140,11 @@
         "SAPETDAlerts_CL",
         "SAPETDInvestigations_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "SAPETDAlerts_CL",
+        "SAPETDInvestigations_CL"
+      ]
     },
     {
       "name": "SAP LogServ (RISE), S/4HANA Cloud private edition",
@@ -2130,8 +2213,14 @@
         "SentinelOneGroups_CL",
         "SentinelOneThreats_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "SentinelOneActivities_CL",
+        "SentinelOneAgents_CL",
+        "SentinelOneAlerts_CL",
+        "SentinelOneGroups_CL",
+        "SentinelOneThreats_CL"
+      ]
     },
     {
       "name": "SentinelOne (using Azure Functions)",
@@ -2168,8 +2257,10 @@
       "officialTables": [
         "SlackAuditV2_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "SlackAuditV2_CL"
+      ]
     },
     {
       "name": "Snowflake (via Codeless Connector Framework)",
@@ -2189,8 +2280,19 @@
         "SnowflakeUserGrant_CL",
         "SnowflakeUsers_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "SnowflakeLoad_CL",
+        "SnowflakeLogin_CL",
+        "SnowflakeMaterializedView_CL",
+        "SnowflakeQuery_CL",
+        "SnowflakeRoleGrant_CL",
+        "SnowflakeRoles_CL",
+        "SnowflakeTableStorageMetrics_CL",
+        "SnowflakeTables_CL",
+        "SnowflakeUserGrant_CL",
+        "SnowflakeUsers_CL"
+      ]
     },
     {
       "name": "SOC Prime Platform Audit Logs Data Connector",
@@ -2225,8 +2327,10 @@
       "officialTables": [
         "SophosEPEvents_CL"
       ],
-      "hasSchema": "none",
-      "tablesInRepo": []
+      "hasSchema": "all",
+      "tablesInRepo": [
+        "SophosEPEvents_CL"
+      ]
     },
     {
       "name": "Subscription-based Microsoft Defender for Cloud (Legacy)",

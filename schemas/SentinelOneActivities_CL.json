@@ -1,0 +1,54 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "AccountId", "type": "string" },
+    { "name": "AccountName", "type": "string", "values": ["Contoso Production", "Contoso Staging", "Contoso Dev"] },
+    { "name": "ActivityType", "type": "real", "values": [1, 2, 3, 5, 19, 20, 23, 27, 28, 29, 33, 52, 65, 66, 71, 72, 80, 86, 133, 134, 135, 136, 2001, 3608, 3610, 3611] },
+    { "name": "ActivityUuid", "type": "string" },
+    { "name": "AgentId", "type": "string" },
+    { "name": "AgentUpdatedVersion", "type": "string", "values": ["23.4.1.225", "23.3.2.15", "23.2.3.418", "24.1.1.100", "24.1.2.50", ""] },
+    { "name": "Comments", "type": "string", "values": ["", "", "User initiated action", "Policy updated by admin", "Scheduled maintenance", ""] },
+    { "name": "CreatedAt", "type": "datetime" },
+    { "name": "Data", "type": "string", "values": [
+      "{\"computerName\":\"WS-PC01\",\"externalIp\":\"203.0.113.42\",\"fullScopeDetails\":\"Site: Default Site\",\"groupName\":\"Default Group\"}",
+      "{\"computerName\":\"SRV-DC01\",\"username\":\"jsmith\",\"role\":\"Admin\",\"source\":\"mgmt\"}",
+      "{\"newValue\":\"protect\",\"oldValue\":\"detect\",\"scopeLevel\":\"site\",\"scopeName\":\"Default Site\"}",
+      "{\"filePath\":\"C:\\\\Windows\\\\Temp\\\\payload.exe\",\"fileContentHash\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}",
+      "{\"scanType\":\"full\",\"startedAt\":\"2025-01-15T08:00:00Z\"}",
+      "{\"threatClassification\":\"Malware\",\"mitigationStatus\":\"mitigated\",\"threatId\":\"1234567890\"}"
+    ] },
+    { "name": "Description", "type": "string", "values": [
+      "Agent WS-PC01 was installed successfully.",
+      "The agent WS-PC02 started a full disk scan.",
+      "Threat was mitigated successfully on SRV-WEB01.",
+      "Policy changed from Detect to Protect for Default Site.",
+      "User jsmith logged in to the management console.",
+      "Exclusion was created for path C:\\Program Files\\App\\.",
+      "Agent SRV-DC01 disconnected from management.",
+      "STAR custom rule 'Suspicious PowerShell' was created.",
+      "Agent WS-LAPTOP03 was uninstalled.",
+      "Blacklist hash added: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ] },
+    { "name": "GroupId", "type": "string" },
+    { "name": "GroupName", "type": "string", "values": ["Default Group", "Workstations", "Servers", "Domain Controllers", "Linux Servers", "Critical Assets"] },
+    { "name": "Hash", "type": "string", "values": ["", "", "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e", ""] },
+    { "name": "Id", "type": "string" },
+    { "name": "OsFamily", "type": "string", "values": ["windows", "windows", "windows", "linux", "macos", "windows"] },
+    { "name": "PrimaryDescription", "type": "string", "values": [
+      "Agent installed on WS-PC01",
+      "Full disk scan completed",
+      "Threat mitigated on endpoint",
+      "Policy updated",
+      "Management console login",
+      "Exclusion created",
+      "Agent disconnected",
+      "Custom detection rule created"
+    ] },
+    { "name": "SecondaryDescription", "type": "string", "values": ["", "Default Site > Default Group", "Classification: Malware", "Changed by jsmith", "Source IP: 10.0.1.50", "Path: C:\\Program Files\\App\\", ""] },
+    { "name": "SiteId", "type": "string" },
+    { "name": "SiteName", "type": "string", "values": ["Default Site", "Production", "Development", "Staging"] },
+    { "name": "ThreatId", "type": "string", "values": ["", "", "", "1234567890123456789", "9876543210987654321", ""] },
+    { "name": "UpdatedAt", "type": "datetime" },
+    { "name": "UserId", "type": "string" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "data_eventName_s", "type": "string", "values": ["LaunchInstance", "TerminateInstance", "CreateBucket", "DeleteBucket", "CreateUser", "DeleteUser", "UpdateUser", "CreatePolicy", "ListInstances", "GetObject", "PutObject", "CreateVcn", "UpdateSecurityList", "CreateSubnet", "ConsoleSignIn"] },
+    { "name": "data_compartmentId_s", "type": "string" },
+    { "name": "data_identity_authType_s", "type": "string", "values": ["natv", "federation", "natv", "natv"] },
+    { "name": "data_identity_ipAddress_s", "type": "string" },
+    { "name": "data_identity_principalName_s", "type": "string" },
+    { "name": "data_request_path_s", "type": "string", "values": ["/20160918/instances", "/20160918/instances/ocid1.instance.oc1", "/20160918/buckets/contoso-prod-data", "/20160918/users", "/20160918/vcns"] },
+    { "name": "data_response_status_d", "type": "real", "values": [200, 200, 201, 400, 401, 403, 404, 409, 500] },
+    { "name": "data_status_s", "type": "string", "values": ["Succeeded", "Failed", "Succeeded", "Succeeded", "Failed"] },
+    { "name": "EventType", "type": "string", "values": ["com.oraclecloud.computeApi.LaunchInstance", "com.oraclecloud.objectstorage.CreateBucket", "com.oraclecloud.identityControlPlane.CreateUser"] },
+    { "name": "EventProduct", "type": "string", "values": ["Oracle Cloud Infrastructure"] },
+    { "name": "EventVendor", "type": "string", "values": ["Oracle"] },
+    { "name": "HttpRequestMethod", "type": "string", "values": ["POST", "GET", "PUT", "DELETE", "PATCH"] },
+    { "name": "HttpStatusCode", "type": "string", "values": ["200", "201", "400", "401", "403", "404", "500"] },
+    { "name": "SrcIpAddr", "type": "string" },
+    { "name": "DstIpAddr", "type": "string" },
+    { "name": "SrcPortNumber", "type": "int" },
+    { "name": "DstPortNumber", "type": "int", "values": [443, 80, 22, 3389] }
+  ]
+}

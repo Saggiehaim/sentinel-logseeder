@@ -1,0 +1,41 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Created", "type": "datetime" },
+    { "name": "EventEndTime", "type": "datetime" },
+    { "name": "EventOriginalUid", "type": "string" },
+    { "name": "EventProduct", "type": "string", "values": ["Sophos Endpoint Protection"] },
+    { "name": "EventVendor", "type": "string", "values": ["Sophos"] },
+    { "name": "EventType", "type": "string", "values": ["Event::Endpoint::UpdateSuccess", "Event::Endpoint::UpdateFailure", "Event::Endpoint::SavScanComplete", "Event::Endpoint::Registered", "Event::Endpoint::CorePuaCleanFailed", "Event::Endpoint::Application::Blocked", "Event::Endpoint::ServiceNotRunning", "Event::Endpoint::Compliance::NotCompliant", "Event::Endpoint::WebControlViolation", "Event::Endpoint::CoreRemedyFailed"] },
+    { "name": "EventSeverity", "type": "string", "values": ["low", "medium", "high", "low", "medium"] },
+    { "name": "EventSubType", "type": "string", "values": ["updated", "scan", "registration", "blocked", "compliance", ""] },
+    { "name": "EventMessage", "type": "string", "values": ["Endpoint updated successfully to version 2024.1.0.25", "Full scan completed, no threats found", "Endpoint registered with Sophos Central", "Application blocked by application control policy", "Endpoint is not compliant with security policy", "Update failed - insufficient disk space", "Web control violation: blocked category"] },
+    { "name": "CustomerId", "type": "string" },
+    { "name": "DvcHostname", "type": "string" },
+    { "name": "DvcAction", "type": "string", "values": ["allowed", "blocked", "updated", "scanned", ""] },
+    { "name": "EndpointId", "type": "string" },
+    { "name": "Source", "type": "string", "values": ["Endpoint", "Server"] },
+    { "name": "SrcIpAddr", "type": "string" },
+    { "name": "SrcDvcType", "type": "string", "values": ["computer", "server", ""] },
+    { "name": "ThreatCategory", "type": "string", "values": ["", "PUA", "Malware", "Adware", ""] },
+    { "name": "ThreatName", "type": "string", "values": ["", "", "PUA/InstallCore", ""] },
+    { "name": "AppSha256", "type": "string" },
+    { "name": "CoreRemedyItems", "type": "string", "values": ["[]", "[{\"path\":\"C:\\\\Windows\\\\Temp\\\\payload.exe\",\"type\":\"file\"}]", ""] },
+    { "name": "CoreRemedyTotalItems", "type": "int", "values": [0, 1, 0, 2, 0] },
+    { "name": "details", "type": "dynamic", "values": [
+      {"items": [], "scan_type": "full"},
+      {"items": [{"path": "C:\\Windows\\Temp\\payload.exe", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}]},
+      {},
+      {}
+    ] },
+    { "name": "source_info", "type": "dynamic", "values": [
+      {"ip": "10.0.1.50"},
+      {"ip": "10.0.2.10"},
+      {}
+    ] },
+    { "name": "amsi_threat_data", "type": "dynamic", "values": [null, null, {"process_name": "powershell.exe", "process_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"}, null] },
+    { "name": "ips_threat_data", "type": "dynamic", "values": [null, null, null] },
+    { "name": "appCerts", "type": "dynamic", "values": [["Microsoft Corporation"], [], []] },
+    { "name": "whitelist_properties", "type": "dynamic", "values": [null, null, null] }
+  ]
+}

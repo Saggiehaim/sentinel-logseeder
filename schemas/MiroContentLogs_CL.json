@@ -1,0 +1,24 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "id", "type": "string" },
+    { "name": "actionTime", "type": "datetime" },
+    { "name": "actionType", "type": "string", "values": ["create", "update", "delete", "move", "copy", "restore"] },
+    { "name": "actor_id", "type": "string" },
+    { "name": "actor_email", "type": "string" },
+    { "name": "actor_name", "type": "string" },
+    { "name": "contentId", "type": "string" },
+    { "name": "itemId", "type": "string" },
+    { "name": "itemType", "type": "string", "values": ["sticky_note", "shape", "text", "card", "image", "frame", "connector", "document", "app_card", "table", "mindmap", "kanban"] },
+    { "name": "relationships", "type": "dynamic", "values": [
+      {"board": {"id": "BRD-001", "name": "Sprint Planning Board"}},
+      {"board": {"id": "BRD-002", "name": "Architecture Diagram"}, "frame": {"id": "FRM-001", "name": "Q1 Goals"}},
+      {}
+    ] },
+    { "name": "state", "type": "dynamic", "values": [
+      {"content": "Action item: Review PR #1234", "style": {"fillColor": "#f5d128"}},
+      {"content": "Database Server", "style": {"borderColor": "#1a1a2e"}},
+      {}
+    ] }
+  ]
+}

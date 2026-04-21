@@ -1,0 +1,34 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Timestamp", "type": "datetime" },
+    { "name": "ReceivedTime", "type": "datetime" },
+    { "name": "EndpointId", "type": "string" },
+    { "name": "EndpointName", "type": "string" },
+    { "name": "Domain", "type": "string", "values": ["contoso.local", "contoso.com", "WORKGROUP", "contoso.local"] },
+    { "name": "TrapsVersion", "type": "string", "values": ["7.9.1.28532", "8.1.0.41564", "8.2.1.50123", "8.3.0.55200", "7.8.0.37210"] },
+    { "name": "Category", "type": "string", "values": ["Status", "Monitoring", "Policy", "Install/Uninstall", "Upgrade/Downgrade"] },
+    { "name": "AgentType", "type": "string", "values": ["AGENT_TYPE_WORKSTATION", "AGENT_TYPE_SERVER", "AGENT_TYPE_DOMAIN_CONTROLLER", "AGENT_TYPE_VDI", "AGENT_TYPE_WORKSTATION"] },
+    { "name": "Subtype", "type": "string", "values": ["AGENT_CONNECTED", "AGENT_DISCONNECTED", "AGENT_POLICY_UPDATE", "AGENT_UPGRADE", "AGENT_SCAN_STARTED", "AGENT_SCAN_COMPLETED", "AGENT_CONTENT_UPDATE"] },
+    { "name": "Result", "type": "string", "values": ["SUCCESS", "SUCCESS", "SUCCESS", "FAIL", "SUCCESS", "PARTIAL"] },
+    { "name": "Reason", "type": "string", "values": [
+      "",
+      "Network timeout",
+      "Policy applied successfully",
+      "Insufficient disk space for upgrade",
+      "Content update downloaded and applied",
+      ""
+    ] },
+    { "name": "Description", "type": "string", "values": [
+      "Agent connected to Cortex XDR management server.",
+      "Agent disconnected from management server.",
+      "Security policy updated on endpoint.",
+      "Agent upgrade from 7.9.1 to 8.1.0 completed successfully.",
+      "Full scan started on endpoint.",
+      "Full scan completed. No threats found.",
+      "Content update applied: version 920-95320.",
+      "Agent failed to upgrade due to insufficient disk space.",
+      "Agent reconnected after temporary network outage."
+    ] }
+  ]
+}

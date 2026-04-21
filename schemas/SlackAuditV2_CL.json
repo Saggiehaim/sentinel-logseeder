@@ -1,0 +1,45 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Id", "type": "string" },
+    { "name": "DateCreate", "type": "real" },
+    { "name": "Action", "type": "string", "values": ["user_login", "user_login_failed", "user_logout", "user_created", "user_deactivated", "user_reactivated", "user_channel_join", "user_channel_leave", "role_change_to_admin", "role_change_to_owner", "role_change_to_user", "public_channel_created", "public_channel_deleted", "public_channel_archive", "private_channel_created", "file_downloaded", "file_uploaded", "file_shared", "file_deleted", "app_installed", "app_uninstalled", "app_approved", "app_restricted", "emoji_added", "pref.two_factor_auth_changed", "pref.sso_setting_changed", "external_shared_channel_connected", "external_shared_channel_disconnected", "channel_posting_permissions_updated", "anomaly"] },
+    { "name": "ActionDescription", "type": "dynamic", "values": [
+      {"short_description": "A user logged in", "long_description": "A user successfully authenticated to the workspace"},
+      {"short_description": "A user login failed", "long_description": "A user failed to authenticate"},
+      {"short_description": "A user was created", "long_description": "A new user account was provisioned"},
+      {"short_description": "A channel was created", "long_description": "A new public channel was created in the workspace"},
+      {"short_description": "A file was downloaded", "long_description": "A user downloaded a file from the workspace"},
+      {"short_description": "An app was installed", "long_description": "A new Slack app was installed in the workspace"}
+    ] },
+    { "name": "Actor", "type": "dynamic", "values": [
+      {"type": "user", "user": {"id": "U001JSMITH", "name": "jsmith", "email": "jsmith@contoso.com", "team": "T001CONTOSO"}},
+      {"type": "user", "user": {"id": "U002AGARCIA", "name": "agarcia", "email": "agarcia@contoso.com", "team": "T001CONTOSO"}},
+      {"type": "user", "user": {"id": "U003ADMIN", "name": "admin", "email": "admin@contoso.com", "team": "T001CONTOSO"}},
+      {"type": "user", "user": {"id": "U004MWILSON", "name": "mwilson", "email": "mwilson@contoso.com", "team": "T001CONTOSO"}},
+      {"type": "user", "user": {"id": "U005LCHEN", "name": "lchen", "email": "lchen@contoso.com", "team": "T001CONTOSO"}}
+    ] },
+    { "name": "Context", "type": "dynamic", "values": [
+      {"ip_address": "10.0.1.50", "location": {"domain": "contoso.com", "id": "T001CONTOSO", "name": "Contoso", "type": "workspace"}, "session_id": "SES-SLACK-001", "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"},
+      {"ip_address": "203.0.113.42", "location": {"domain": "contoso.com", "id": "T001CONTOSO", "name": "Contoso", "type": "workspace"}, "session_id": "SES-SLACK-002", "ua": "Slackbot-LinkExpanding 1.0"},
+      {"ip_address": "198.51.100.17", "location": {"domain": "contoso.com", "id": "E001CONTOSO", "name": "Contoso Enterprise", "type": "enterprise"}, "session_id": "SES-SLACK-003"},
+      {"ip_address": "10.0.2.10", "location": {"domain": "contoso.com", "id": "T001CONTOSO", "name": "Contoso", "type": "workspace"}}
+    ] },
+    { "name": "Details", "type": "dynamic", "values": [
+      {"new_value": ["admin"], "previous_value": ["member"], "type": "role_change"},
+      {"channel_id": "C001GENERAL", "channel_name": "general", "is_internal": true},
+      {"app_id": "A001JIRA", "app_name": "Jira Cloud", "scopes": ["channels:read", "chat:write"]},
+      {"file_id": "F001DOC", "file_name": "Q4-report.pdf", "file_type": "pdf", "file_size": 2457600},
+      {"name": "party_parrot", "value": "https://emoji.slack-edge.com/T001/party_parrot/1234.gif"},
+      {}
+    ] },
+    { "name": "Entity", "type": "dynamic", "values": [
+      {"type": "user", "user": {"id": "U001JSMITH", "name": "jsmith", "email": "jsmith@contoso.com"}},
+      {"type": "channel", "channel": {"id": "C001GENERAL", "name": "general", "is_private": false, "is_shared": false}},
+      {"type": "channel", "channel": {"id": "C002SECRET", "name": "security-ops", "is_private": true, "is_shared": false}},
+      {"type": "file", "file": {"id": "F001DOC", "name": "Q4-report.pdf", "title": "Q4 Financial Report"}},
+      {"type": "app", "app": {"id": "A001JIRA", "name": "Jira Cloud", "is_distributed": true}},
+      {"type": "workspace", "workspace": {"id": "T001CONTOSO", "name": "Contoso", "domain": "contoso"}}
+    ] }
+  ]
+}

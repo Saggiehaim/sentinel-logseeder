@@ -1,0 +1,13 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Data", "type": "string", "values": [
+      "{\"ROLE_ID\":1,\"CREATED_ON\":\"2024-01-01T00:00:00.000Z\",\"NAME\":\"SYSADMIN\",\"COMMENT\":\"System administrator role\",\"OWNER\":\"ACCOUNTADMIN\",\"ROLE_TYPE\":\"ROLE\",\"OWNER_ROLE_TYPE\":\"ROLE\"}",
+      "{\"ROLE_ID\":2,\"CREATED_ON\":\"2024-01-01T00:00:00.000Z\",\"NAME\":\"SECURITYADMIN\",\"COMMENT\":\"Security administrator role\",\"OWNER\":\"ACCOUNTADMIN\",\"ROLE_TYPE\":\"ROLE\",\"OWNER_ROLE_TYPE\":\"ROLE\"}",
+      "{\"ROLE_ID\":3,\"CREATED_ON\":\"2024-01-01T00:00:00.000Z\",\"NAME\":\"ACCOUNTADMIN\",\"COMMENT\":\"Account administrator role\",\"OWNER\":\"\",\"ROLE_TYPE\":\"ROLE\",\"OWNER_ROLE_TYPE\":\"ROLE\"}",
+      "{\"ROLE_ID\":100,\"CREATED_ON\":\"2024-06-15T10:30:00.000Z\",\"NAME\":\"ANALYST\",\"COMMENT\":\"Data analyst read-only role\",\"OWNER\":\"SECURITYADMIN\",\"ROLE_TYPE\":\"ROLE\",\"OWNER_ROLE_TYPE\":\"ROLE\"}",
+      "{\"ROLE_ID\":101,\"CREATED_ON\":\"2024-06-15T10:35:00.000Z\",\"NAME\":\"ETL_ROLE\",\"COMMENT\":\"ETL pipeline service role\",\"OWNER\":\"SYSADMIN\",\"ROLE_TYPE\":\"ROLE\",\"OWNER_ROLE_TYPE\":\"ROLE\"}",
+      "{\"ROLE_ID\":102,\"CREATED_ON\":\"2024-09-01T08:00:00.000Z\",\"NAME\":\"DATA_ENGINEER\",\"COMMENT\":\"Data engineering team role\",\"OWNER\":\"SECURITYADMIN\",\"ROLE_TYPE\":\"ROLE\",\"OWNER_ROLE_TYPE\":\"ROLE\"}"
+    ] }
+  ]
+}

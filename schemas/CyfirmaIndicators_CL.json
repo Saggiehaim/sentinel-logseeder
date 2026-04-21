@@ -1,0 +1,1 @@
+{"columns":[{"name":"TimeGenerated","type":"datetime"},{"name":"IndicatorID","type":"string"},{"name":"name","type":"string","values":["Malicious IP - C2 Server","Phishing Domain","Malware Hash - Trojan"]},{"name":"Description","type":"string"},{"name":"pattern","type":"string","values":["[ipv4-addr:value = 

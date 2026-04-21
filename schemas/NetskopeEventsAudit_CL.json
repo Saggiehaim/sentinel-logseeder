@@ -1,0 +1,22 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "timestamp", "type": "int" },
+    { "name": "audit_log_event", "type": "string", "values": ["Login Successful", "Login Failed", "Password Changed", "Admin Role Changed", "Policy Created", "Policy Updated", "Policy Deleted", "User Created", "User Deleted", "Settings Updated", "API Token Created", "API Token Revoked", "Report Downloaded", "Alert Acknowledged"] },
+    { "name": "ccl", "type": "string", "values": ["excellent", "high", "medium"] },
+    { "name": "count_i", "type": "int", "values": [1, 1, 1, 2, 1] },
+    { "name": "organization_unit", "type": "string", "values": ["IT", "Engineering", "Security", "Finance", "HR", ""] },
+    { "name": "sAMAccountName", "type": "string" },
+    { "name": "severity_level", "type": "int", "values": [1, 2, 3, 4] },
+    { "name": "supporting_data", "type": "dynamic", "values": [
+      {"data_type": "reason", "data_values": ["User initiated"]},
+      {"data_type": "ip_address", "data_values": ["10.0.1.50"]},
+      {"data_type": "email", "data_values": ["admin@contoso.com"]},
+      {}
+    ] },
+    { "name": "type_s", "type": "string", "values": ["admin_audit_logs"] },
+    { "name": "ur_normalized", "type": "string" },
+    { "name": "user", "type": "string" },
+    { "name": "userPrincipalName", "type": "string" }
+  ]
+}

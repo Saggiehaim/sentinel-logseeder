@@ -1,0 +1,38 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "EventId", "type": "int" },
+    { "name": "EventCreationTime", "type": "datetime" },
+    { "name": "EventProduct", "type": "string", "values": ["Jira"] },
+    { "name": "EventVendor", "type": "string", "values": ["Atlassian"] },
+    { "name": "EventSource", "type": "string", "values": ["Jira", "Jira Cloud", "Jira Software"] },
+    { "name": "EventCategoryType", "type": "string", "values": ["user management", "project administration", "permissions", "workflows", "group management", "system", "issue management"] },
+    { "name": "EventMessage", "type": "string", "values": ["User added to group", "Project created", "Permission scheme updated", "Workflow scheme changed", "User removed from project role", "Issue security level changed", "Global permission granted", "User logged in", "Group created", "Filter shared"] },
+    { "name": "UserName", "type": "string" },
+    { "name": "UserSid", "type": "string" },
+    { "name": "SrcIpAddr", "type": "string" },
+    { "name": "ObjectItemId", "type": "string" },
+    { "name": "ObjectItemName", "type": "string", "values": ["ContosoApp Project", "jsmith@contoso.com", "Developers Group", "Default Permission Scheme", "Bug Workflow", "Sprint Board", ""] },
+    { "name": "ObjectItemTypeName", "type": "string", "values": ["PROJECT", "USER", "GROUP", "PERMISSION_SCHEME", "WORKFLOW", "BOARD", "FILTER", "FIELD_CONFIGURATION"] },
+    { "name": "ObjectItemParentId", "type": "string" },
+    { "name": "ObjectItemParentName", "type": "string", "values": ["", "ContosoApp Project", "Global", ""] },
+    { "name": "objectItem", "type": "dynamic", "values": [
+      {"id": "10001", "name": "ContosoApp Project", "typeName": "PROJECT"},
+      {"id": "USR-001", "name": "jsmith@contoso.com", "typeName": "USER", "parentId": "10001", "parentName": "ContosoApp Project"},
+      {"id": "GRP-001", "name": "Developers", "typeName": "GROUP"},
+      {}
+    ] },
+    { "name": "AssociatedItems", "type": "dynamic", "values": [
+      [{"id": "USR-001", "name": "jsmith@contoso.com", "typeName": "USER", "parentId": "10001", "parentName": "ContosoApp Project"}],
+      [{"id": "GRP-001", "name": "Developers", "typeName": "GROUP"}],
+      [],
+      []
+    ] },
+    { "name": "ChangedValues", "type": "dynamic", "values": [
+      [{"fieldName": "Permission", "changedFrom": "", "changedTo": "BROWSE_PROJECTS"}],
+      [{"fieldName": "Name", "changedFrom": "Old Project", "changedTo": "ContosoApp Project"}],
+      [],
+      []
+    ] }
+  ]
+}

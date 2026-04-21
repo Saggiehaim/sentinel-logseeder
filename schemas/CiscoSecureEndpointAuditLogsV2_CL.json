@@ -1,0 +1,14 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "AuditLogId", "type": "string" },
+    { "name": "AuditLogType", "type": "string", "values": ["create", "update", "delete", "read", "login", "logout", "execute"] },
+    { "name": "AuditLogUser", "type": "string" },
+    { "name": "CreatedAt", "type": "datetime" },
+    { "name": "Event", "type": "string", "values": ["Policy updated", "Group created", "Computer moved", "Exclusion created", "Exclusion deleted", "User login", "User logout", "API key created", "Connector deployed", "Scan initiated"] },
+    { "name": "Item", "type": "string", "values": ["Protect Policy - Windows", "Default Group", "WS-PC01", "Exclusion: C:\\Program Files\\App\\", "API Key: automation-svc", ""] },
+    { "name": "Message", "type": "string", "values": ["Policy 'Protect Policy - Windows' was updated by admin@contoso.com", "Group 'Servers' was created", "Computer WS-PC01 was moved to group 'Workstations'", "Exclusion for path 'C:\\Program Files\\App\\' was created", "User admin@contoso.com logged in from 10.0.1.50", "Scan was initiated on group 'Critical Assets'"] },
+    { "name": "NewAttributes", "type": "string", "values": ["{\"file_scan_on_execute\":true,\"detection_mode\":\"protect\"}", "{\"name\":\"Servers\",\"description\":\"Server endpoints\"}", "", ""] },
+    { "name": "OldAttributes", "type": "string", "values": ["{\"file_scan_on_execute\":false,\"detection_mode\":\"audit\"}", "", "", ""] }
+  ]
+}

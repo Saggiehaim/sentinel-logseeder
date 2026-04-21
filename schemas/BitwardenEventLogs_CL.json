@@ -1,0 +1,15 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "actingUserId", "type": "string" },
+    { "name": "eventType", "type": "int", "values": [1000, 1001, 1002, 1003, 1005, 1006, 1007, 1100, 1101, 1102, 1107, 1108, 1111, 1114, 1115, 1116, 1300, 1301, 1302, 1400, 1401, 1402, 1500, 1501, 1502, 1503, 1600, 1602, 1604, 1605, 1700] },
+    { "name": "device", "type": "int", "values": [0, 1, 2, 3, 6, 7, 8, 9, 10, 14, 16, 17, 20, 21] },
+    { "name": "ipAddress", "type": "string" },
+    { "name": "itemId", "type": "string" },
+    { "name": "collectionId", "type": "string" },
+    { "name": "groupId", "type": "string" },
+    { "name": "memberId", "type": "string" },
+    { "name": "policyId", "type": "string" },
+    { "name": "installationId", "type": "string" }
+  ]
+}

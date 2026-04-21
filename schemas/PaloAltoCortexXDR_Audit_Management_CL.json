@@ -1,0 +1,51 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "AuditId", "type": "int" },
+    { "name": "AuditOwnerName", "type": "string", "values": ["jsmith@contoso.com", "admin@contoso.com", "agarcia@contoso.com", "secops@contoso.com", "System"] },
+    { "name": "AuditOwnerEmail", "type": "string", "values": ["jsmith@contoso.com", "admin@contoso.com", "agarcia@contoso.com", "secops@contoso.com", ""] },
+    { "name": "AuditAssetJSON", "type": "dynamic", "values": [
+      {"host_name": "WS-PC01", "endpoint_id": "EP-001", "ip": ["10.0.1.50"]},
+      {"host_name": "SRV-DC01", "endpoint_id": "EP-003", "ip": ["10.0.2.10"]},
+      {"incident_id": "INC-1001", "alert_count": 3},
+      {"policy_name": "Windows Workstations - Protect", "policy_id": "POL-001"},
+      {}
+    ] },
+    { "name": "AuditAssetNames", "type": "string", "values": ["WS-PC01", "SRV-DC01", "INC-1001", "Windows Workstations - Protect", ""] },
+    { "name": "AuditHostName", "type": "string", "values": ["WS-PC01", "SRV-DC01", "SRV-WEB01", "", ""] },
+    { "name": "AuditResult", "type": "string", "values": ["SUCCESS", "SUCCESS", "SUCCESS", "FAIL", "SUCCESS", "PARTIAL"] },
+    { "name": "AuditReason", "type": "string", "values": ["", "", "Permission denied", "", "Partial endpoint group update"] },
+    { "name": "AuditDescription", "type": "string", "values": [
+      "User logged in to Cortex XDR console.",
+      "Incident INC-1001 status changed to resolved.",
+      "Alert dismissed by analyst.",
+      "New exclusion created for path C:\\Program Files\\App\\.",
+      "Endpoint isolation initiated on WS-PC01.",
+      "Policy 'Windows Workstations - Protect' updated.",
+      "User logged out from Cortex XDR console.",
+      "STAR rule 'Suspicious PowerShell' created.",
+      "Endpoint group 'Critical Servers' updated with new members.",
+      "Response action: File quarantine executed on SRV-WEB01."
+    ] },
+    { "name": "AuditEntity", "type": "string", "values": ["AUTH", "INCIDENT", "ALERT", "EXCLUSION", "ENDPOINT", "POLICY", "AUTH", "STAR", "ENDPOINT_GROUP", "RESPONSE_ACTION"] },
+    { "name": "AuditEntitySubtype", "type": "string", "values": ["Login", "Resolve", "Dismiss", "Create", "Execute", "Update", "Logout", "Create", "Update", "Execute"] },
+    { "name": "AuditSessionId", "type": "int" },
+    { "name": "AuditCaseId", "type": "int", "values": [0, 1001, 1002, 0, 0, 0] },
+    { "name": "AuditInsertTime", "type": "datetime" },
+    { "name": "AuditSeverity", "type": "string", "values": ["SEV_010_INFO", "SEV_010_INFO", "SEV_020_LOW", "SEV_030_MEDIUM", "SEV_040_HIGH", "SEV_010_INFO"] },
+    { "name": "AuditSourceIp", "type": "string" },
+    { "name": "AuditUserAgent", "type": "string", "values": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+      "Cortex-XDR-API/1.0",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Firefox/121.0"
+    ] },
+    { "name": "AuditUserRoles", "type": "dynamic", "values": [
+      ["Instance Administrator"],
+      ["Security Admin"],
+      ["Viewer"],
+      ["Responder"],
+      ["Instance Administrator", "Security Admin"]
+    ] }
+  ]
+}

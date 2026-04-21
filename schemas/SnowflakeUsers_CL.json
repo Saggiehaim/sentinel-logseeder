@@ -1,0 +1,12 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Data", "type": "string", "values": [
+      "{\"USER_ID\":1001,\"NAME\":\"JSMITH\",\"LOGIN_NAME\":\"JSMITH\",\"DISPLAY_NAME\":\"John Smith\",\"FIRST_NAME\":\"John\",\"LAST_NAME\":\"Smith\",\"EMAIL\":\"jsmith@contoso.com\",\"CREATED_ON\":\"2024-06-15T10:30:00.000Z\",\"HAS_PASSWORD\":true,\"MUST_CHANGE_PASSWORD\":false,\"DISABLED\":false,\"SNOWFLAKE_LOCK\":false,\"DEFAULT_WAREHOUSE\":\"COMPUTE_WH\",\"DEFAULT_NAMESPACE\":\"PRODUCTION_DB.PUBLIC\",\"DEFAULT_ROLE\":\"ANALYST\",\"EXT_AUTHN_DUO\":true,\"HAS_MFA\":true,\"HAS_RSA_PUBLIC_KEY\":false,\"LAST_SUCCESS_LOGIN\":\"2025-01-15T14:22:00.000Z\",\"OWNER\":\"SECURITYADMIN\",\"TYPE\":\"PERSON\",\"COMMENT\":\"Data analyst - Engineering team\"}",
+      "{\"USER_ID\":1002,\"NAME\":\"AGARCIA\",\"LOGIN_NAME\":\"AGARCIA\",\"DISPLAY_NAME\":\"Ana Garcia\",\"FIRST_NAME\":\"Ana\",\"LAST_NAME\":\"Garcia\",\"EMAIL\":\"agarcia@contoso.com\",\"CREATED_ON\":\"2024-06-15T10:35:00.000Z\",\"HAS_PASSWORD\":true,\"DISABLED\":false,\"DEFAULT_WAREHOUSE\":\"COMPUTE_WH\",\"DEFAULT_ROLE\":\"ANALYST\",\"EXT_AUTHN_DUO\":true,\"HAS_MFA\":true,\"LAST_SUCCESS_LOGIN\":\"2025-01-15T11:30:00.000Z\",\"OWNER\":\"SECURITYADMIN\",\"TYPE\":\"PERSON\"}",
+      "{\"USER_ID\":1003,\"NAME\":\"ADMIN\",\"LOGIN_NAME\":\"ADMIN\",\"DISPLAY_NAME\":\"Admin User\",\"EMAIL\":\"admin@contoso.com\",\"CREATED_ON\":\"2024-01-01T00:00:00.000Z\",\"HAS_PASSWORD\":true,\"DEFAULT_WAREHOUSE\":\"ADMIN_WH\",\"DEFAULT_ROLE\":\"ACCOUNTADMIN\",\"EXT_AUTHN_DUO\":true,\"HAS_MFA\":true,\"LAST_SUCCESS_LOGIN\":\"2025-01-15T20:30:00.000Z\",\"OWNER\":\"\",\"TYPE\":\"PERSON\"}",
+      "{\"USER_ID\":2001,\"NAME\":\"SVC_ETL\",\"LOGIN_NAME\":\"SVC_ETL\",\"DISPLAY_NAME\":\"ETL Service Account\",\"EMAIL\":\"svc_etl@contoso.com\",\"CREATED_ON\":\"2024-06-15T10:40:00.000Z\",\"HAS_PASSWORD\":false,\"HAS_RSA_PUBLIC_KEY\":true,\"DEFAULT_WAREHOUSE\":\"ETL_WH\",\"DEFAULT_ROLE\":\"ETL_ROLE\",\"EXT_AUTHN_DUO\":false,\"HAS_MFA\":false,\"LAST_SUCCESS_LOGIN\":\"2025-01-15T02:00:00.000Z\",\"OWNER\":\"SYSADMIN\",\"TYPE\":\"SERVICE\",\"COMMENT\":\"ETL pipeline service account\"}",
+      "{\"USER_ID\":1004,\"NAME\":\"MWILSON\",\"LOGIN_NAME\":\"MWILSON\",\"DISPLAY_NAME\":\"Michael Wilson\",\"EMAIL\":\"mwilson@contoso.com\",\"CREATED_ON\":\"2024-09-01T08:00:00.000Z\",\"HAS_PASSWORD\":true,\"DEFAULT_WAREHOUSE\":\"COMPUTE_WH\",\"DEFAULT_ROLE\":\"DATA_ENGINEER\",\"EXT_AUTHN_DUO\":false,\"HAS_MFA\":false,\"DISABLED\":false,\"OWNER\":\"SECURITYADMIN\",\"TYPE\":\"PERSON\"}"
+    ] }
+  ]
+}

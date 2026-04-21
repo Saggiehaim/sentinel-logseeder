@@ -1,0 +1,113 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "IncidentId", "type": "string" },
+    { "name": "IncidentName", "type": "string", "values": [
+      "Suspicious PowerShell Execution on WS-PC01",
+      "Ransomware Activity Detected on SRV-FILE01",
+      "Credential Theft Attempt on SRV-DC01",
+      "Lateral Movement via SMB from WS-PC02",
+      "Phishing Attachment Execution on WS-LAPTOP03",
+      "C2 Beaconing Activity from LNX-APP01",
+      "Data Exfiltration to External IP from SRV-WEB01",
+      "Privilege Escalation on SRV-DB01",
+      "Defense Evasion DLL Side-Loading on WS-PC01",
+      "Malware Infection on Multiple Endpoints"
+    ] },
+    { "name": "CreationTime", "type": "datetime" },
+    { "name": "ModificationTime", "type": "datetime" },
+    { "name": "DetectionTime", "type": "datetime" },
+    { "name": "Status", "type": "string", "values": ["new", "under_investigation", "resolved_threat_handled", "new", "resolved_false_positive", "under_investigation", "new", "resolved_known_issue"] },
+    { "name": "Severity", "type": "string", "values": ["high", "critical", "critical", "medium", "low", "high", "medium", "high"] },
+    { "name": "Description", "type": "string", "values": [
+      "Multiple suspicious activities were detected originating from WS-PC01 involving encoded PowerShell commands.",
+      "Ransomware-like mass file encryption detected on SRV-FILE01 across multiple user directories.",
+      "Credential dumping tools and LSASS memory access were detected on the domain controller.",
+      "SMB-based lateral movement was detected from WS-PC02 to multiple internal servers.",
+      "A phishing email attachment spawned a child process that attempted to download a payload.",
+      "Periodic beaconing to a known C2 IP address was detected from the Linux application server.",
+      "Large volume data transfer to an external IP was detected from the web server.",
+      "Privilege escalation via token manipulation was detected on the database server."
+    ] },
+    { "name": "AssignedUserMail", "type": "string", "values": ["secops@contoso.com", "jsmith@contoso.com", "agarcia@contoso.com", "", "secops@contoso.com", ""] },
+    { "name": "assignedUserPrettyName", "type": "string", "values": ["SecOps Team", "John Smith", "Ana Garcia", "", "SecOps Team", ""] },
+    { "name": "AlertCount", "type": "int", "values": [3, 8, 5, 2, 1, 4, 6, 2] },
+    { "name": "LowSeverityAlertCount", "type": "int", "values": [0, 0, 0, 1, 1, 0, 1, 0] },
+    { "name": "MedSeverityAlertCount", "type": "int", "values": [1, 2, 1, 1, 0, 2, 3, 1] },
+    { "name": "HighSeverityAlertCount", "type": "int", "values": [2, 3, 3, 0, 0, 2, 2, 1] },
+    { "name": "CriticalSeverityAlertCount", "type": "int", "values": [0, 3, 1, 0, 0, 0, 0, 0] },
+    { "name": "UserCount", "type": "int", "values": [1, 3, 1, 2, 1, 1, 1, 1] },
+    { "name": "HostCount", "type": "int", "values": [1, 1, 1, 4, 1, 1, 1, 1] },
+    { "name": "Notes", "type": "string", "values": ["", "Escalated to SOC Lead", "Related to phishing campaign", "", "", "", ""] },
+    { "name": "ResolveComment", "type": "string", "values": ["", "Threat contained and remediated", "Known issue - false positive from AV update", "", "", "", ""] },
+    { "name": "ResolvedTimestamp", "type": "datetime" },
+    { "name": "ManualSeverity", "type": "string", "values": ["", "", "critical", "", "low", "", "", ""] },
+    { "name": "ManualDescription", "type": "string", "values": ["", "", "", "", "", "", ""] },
+    { "name": "XdrUrl", "type": "string", "values": [
+      "https://contoso.xdr.us.paloaltonetworks.com/incident-view/INC-1001",
+      "https://contoso.xdr.us.paloaltonetworks.com/incident-view/INC-1002",
+      "https://contoso.xdr.us.paloaltonetworks.com/incident-view/INC-1003"
+    ] },
+    { "name": "Starred", "type": "boolean", "values": [false, true, true, false, false, false] },
+    { "name": "Hosts", "type": "dynamic", "values": [
+      ["WS-PC01"],
+      ["SRV-FILE01"],
+      ["SRV-DC01"],
+      ["WS-PC02", "SRV-DC01", "SRV-WEB01", "SRV-DB01"],
+      ["WS-LAPTOP03"],
+      ["LNX-APP01"]
+    ] },
+    { "name": "Users", "type": "dynamic", "values": [
+      ["contoso\\jsmith"],
+      ["contoso\\admin", "contoso\\mwilson", "contoso\\lchen"],
+      ["contoso\\admin"],
+      ["contoso\\agarcia", "contoso\\jsmith"],
+      ["contoso\\pjones"],
+      ["root"]
+    ] },
+    { "name": "IncidentSources", "type": "dynamic", "values": [
+      ["XDR Agent"],
+      ["XDR Agent", "XDR Analytics"],
+      ["XDR BIOC", "Correlation"],
+      ["XDR Analytics"],
+      ["XDR Agent"],
+      ["IOC", "XDR Analytics"]
+    ] },
+    { "name": "RuleBasedScore", "type": "int", "values": [75, 95, 90, 60, 40, 80, 70, 85] },
+    { "name": "ManualScore", "type": "int", "values": [0, 0, 95, 0, 30, 0, 0, 0] },
+    { "name": "WildfireHits", "type": "int", "values": [0, 2, 1, 0, 1, 0, 0, 0] },
+    { "name": "AlertsGroupingStatus", "type": "string", "values": ["Enabled", "Enabled", "Enabled", "Disabled", "Enabled"] },
+    { "name": "MitreTacticsIdsAndNames", "type": "dynamic", "values": [
+      ["TA0002 - Execution"],
+      ["TA0040 - Impact", "TA0002 - Execution"],
+      ["TA0006 - Credential Access", "TA0004 - Privilege Escalation"],
+      ["TA0008 - Lateral Movement"],
+      ["TA0001 - Initial Access", "TA0002 - Execution"],
+      ["TA0011 - Command and Control"]
+    ] },
+    { "name": "MitreTechniquesIdsAndNames", "type": "dynamic", "values": [
+      ["T1059.001 - PowerShell"],
+      ["T1486 - Data Encrypted for Impact"],
+      ["T1003 - OS Credential Dumping", "T1134 - Access Token Manipulation"],
+      ["T1021.002 - Remote Services: SMB/Windows Admin Shares"],
+      ["T1566.001 - Phishing: Spearphishing Attachment"],
+      ["T1071.001 - Application Layer Protocol: Web Protocols"]
+    ] },
+    { "name": "AlertCategories", "type": "dynamic", "values": [
+      ["Malware"],
+      ["Ransomware"],
+      ["Credential Access"],
+      ["Lateral Movement"],
+      ["Phishing"],
+      ["Command and Control"]
+    ] },
+    { "name": "OriginalTags", "type": "dynamic", "values": [[], [], ["VIP-User"], [], []] },
+    { "name": "Tags", "type": "dynamic", "values": [
+      ["Needs Investigation"],
+      ["Critical", "Ransomware"],
+      ["Credential Theft", "VIP-User"],
+      [],
+      ["Phishing Campaign Q1-2025"]
+    ] }
+  ]
+}

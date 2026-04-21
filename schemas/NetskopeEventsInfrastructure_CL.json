@@ -1,0 +1,14 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "timestamp", "type": "int" },
+    { "name": "hostname", "type": "string" },
+    { "name": "serial", "type": "string" },
+    { "name": "metric_name", "type": "string", "values": ["npa_status", "client_version", "tunnel_up", "steering_config_applied", "dns_status", "last_event_time", "cpu_usage", "memory_usage"] },
+    { "name": "metric_type", "type": "string", "values": ["boolean", "string", "gauge", "counter"] },
+    { "name": "metric_value", "type": "string", "values": ["true", "23.4.1", "1", "true", "active", "1705334400", "15.2", "68.5"] },
+    { "name": "boolean_metric_value", "type": "string", "values": ["true", "false", "true", "true"] },
+    { "name": "metric_true_count", "type": "string", "values": ["1", "0", "1", "1"] },
+    { "name": "package_version", "type": "string", "values": ["120.0.1", "119.5.2", "120.1.0", "118.3.4"] }
+  ]
+}

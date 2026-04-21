@@ -1,0 +1,57 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "id", "type": "string" },
+    { "name": "event_type", "type": "string", "values": ["THREAT", "APP_RISK", "DEVICE_RISK", "CONFIGURATION_RISK", "VULNERABILITY", "AUDIT", "SMISHING", "CONTENT_POLICY"] },
+    { "name": "log_type", "type": "string", "values": ["threat", "audit", "device", "app", "vulnerability"] },
+    { "name": "enterprise_guid", "type": "string" },
+    { "name": "change_type", "type": "string", "values": ["CREATED", "UPDATED", "RESOLVED", "DELETED", ""] },
+    { "name": "device_activation_status", "type": "string", "values": ["ACTIVATED", "DEACTIVATED", "PENDING"] },
+    { "name": "device_activated_at", "type": "datetime" },
+    { "name": "device_checkin_time", "type": "datetime" },
+    { "name": "device_customer_id", "type": "string" },
+    { "name": "device_group_guid", "type": "string" },
+    { "name": "client_lookout_sdk_version", "type": "string", "values": ["6.10.0", "6.9.2", "6.8.5"] },
+    { "name": "client_package_name", "type": "string", "values": ["com.lookout.enterprise", "com.lookout.enterprise.ios"] },
+    { "name": "client_package_version", "type": "string", "values": ["6.10.0.123", "6.9.2.100"] },
+    { "name": "device", "type": "dynamic", "values": [
+      {"guid": "DEV-LO-001", "hardware_model": "iPhone 15 Pro", "os": "iOS", "os_version": "17.2", "platform": "IOS", "user_email": "jsmith@contoso.com"},
+      {"guid": "DEV-LO-002", "hardware_model": "Samsung Galaxy S24", "os": "Android", "os_version": "14", "platform": "ANDROID", "user_email": "agarcia@contoso.com"},
+      {"guid": "DEV-LO-003", "hardware_model": "Pixel 8", "os": "Android", "os_version": "14", "platform": "ANDROID", "user_email": "mwilson@contoso.com"}
+    ] },
+    { "name": "threat", "type": "dynamic", "values": [
+      {"classification": "SIDELOADED_APP", "severity": "HIGH", "type": "APP_THREAT", "name": "Suspicious sideloaded application detected", "first_detected_at": "2025-01-15T14:22:00Z"},
+      {"classification": "NETWORK_ATTACK", "severity": "CRITICAL", "type": "NETWORK_THREAT", "name": "Man-in-the-middle attack detected", "first_detected_at": "2025-01-15T15:10:00Z"},
+      {"classification": "ROOTED_DEVICE", "severity": "HIGH", "type": "DEVICE_THREAT", "name": "Device root/jailbreak detected"},
+      null
+    ] },
+    { "name": "actor", "type": "dynamic", "values": [
+      {"email": "admin@contoso.com", "name": "Admin User"},
+      null
+    ] },
+    { "name": "target", "type": "dynamic", "values": [
+      {"email": "jsmith@contoso.com", "device_guid": "DEV-LO-001"},
+      null
+    ] },
+    { "name": "audit", "type": "dynamic", "values": [
+      {"action": "POLICY_UPDATED", "resource_type": "POLICY", "resource_name": "iOS Security Policy"},
+      {"action": "GROUP_CREATED", "resource_type": "GROUP", "resource_name": "Executive Devices"},
+      null
+    ] },
+    { "name": "device_permissions", "type": "dynamic", "values": [["CAMERA", "CONTACTS", "LOCATION"], ["STORAGE", "LOCATION"], []] },
+    { "name": "device_vulns", "type": "dynamic", "values": [
+      [{"cve": "CVE-2024-23225", "severity": "HIGH", "os_patch_available": true}],
+      [],
+      null
+    ] },
+    { "name": "smishing_alert", "type": "dynamic", "values": [
+      {"url": "https://phishing-site.example.net/login", "sender": "+1-555-0123", "message_preview": "Your account has been locked..."},
+      null
+    ] },
+    { "name": "risky_config", "type": "dynamic", "values": [
+      {"type": "LOCK_SCREEN_DISABLED", "severity": "MEDIUM"},
+      {"type": "DEVELOPER_MODE_ENABLED", "severity": "LOW"},
+      null
+    ] }
+  ]
+}

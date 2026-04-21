@@ -1,0 +1,21 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "HostId", "type": "string" },
+    { "name": "QGHostId", "type": "string" },
+    { "name": "IPAddress", "type": "string" },
+    { "name": "DnsName", "type": "string" },
+    { "name": "NetBios", "type": "string" },
+    { "name": "OperatingSystem", "type": "string", "values": ["Windows 11 Enterprise", "Windows Server 2022 Datacenter", "Ubuntu 22.04.3 LTS", "Red Hat Enterprise Linux 9.2", "macOS 14.2", "Windows 10 Enterprise"] },
+    { "name": "TrackingMethod", "type": "string", "values": ["IP", "DNS", "NETBIOS", "AGENT", "EC2"] },
+    { "name": "LastScanDateTime", "type": "datetime" },
+    { "name": "LastVMScannedDateTime", "type": "datetime" },
+    { "name": "LastVMAuthScannedDateTime", "type": "datetime" },
+    { "name": "DetectionList", "type": "dynamic", "values": [
+      [{"QID": 91803, "Type": "Confirmed", "Severity": 5, "Title": "Microsoft Windows Remote Code Execution Vulnerability", "Port": 445, "Protocol": "tcp", "FirstFoundDatetime": "2025-01-10T08:00:00Z", "LastFoundDatetime": "2025-01-15T14:22:00Z", "TimesFound": 3, "Status": "Active", "IsDisabled": false, "LastProcessedDatetime": "2025-01-15T14:22:00Z", "Results": "CVE-2024-38063 confirmed"}, {"QID": 91780, "Type": "Potential", "Severity": 3, "Title": "SSL/TLS Protocol Version Outdated", "Port": 443, "Protocol": "tcp", "FirstFoundDatetime": "2025-01-05T12:00:00Z", "Status": "Active", "Results": "TLSv1.0 detected"}],
+      [{"QID": 105000, "Type": "Confirmed", "Severity": 4, "Title": "OpenSSH Vulnerability", "Port": 22, "Protocol": "tcp", "Status": "Active", "Results": "OpenSSH 8.9 detected, CVE-2024-6387"}],
+      [{"QID": 90001, "Type": "Confirmed", "Severity": 2, "Title": "Missing Security Update", "Status": "Fixed", "Results": "KB5034441 required"}],
+      []
+    ] }
+  ]
+}

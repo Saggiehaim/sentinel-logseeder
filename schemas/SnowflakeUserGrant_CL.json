@@ -1,0 +1,12 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Data", "type": "string", "values": [
+      "{\"CREATED_ON\":\"2024-06-15T10:30:00.000Z\",\"ROLE\":\"ANALYST\",\"GRANTED_TO\":\"USER\",\"GRANTEE_NAME\":\"JSMITH\",\"GRANTED_BY\":\"SECURITYADMIN\"}",
+      "{\"CREATED_ON\":\"2024-06-15T10:35:00.000Z\",\"ROLE\":\"ANALYST\",\"GRANTED_TO\":\"USER\",\"GRANTEE_NAME\":\"AGARCIA\",\"GRANTED_BY\":\"SECURITYADMIN\"}",
+      "{\"CREATED_ON\":\"2024-06-15T10:40:00.000Z\",\"ROLE\":\"ETL_ROLE\",\"GRANTED_TO\":\"USER\",\"GRANTEE_NAME\":\"SVC_ETL\",\"GRANTED_BY\":\"SYSADMIN\"}",
+      "{\"CREATED_ON\":\"2024-01-01T00:00:00.000Z\",\"ROLE\":\"ACCOUNTADMIN\",\"GRANTED_TO\":\"USER\",\"GRANTEE_NAME\":\"ADMIN\",\"GRANTED_BY\":\"\"}",
+      "{\"CREATED_ON\":\"2024-09-01T08:00:00.000Z\",\"ROLE\":\"DATA_ENGINEER\",\"GRANTED_TO\":\"USER\",\"GRANTEE_NAME\":\"MWILSON\",\"GRANTED_BY\":\"SECURITYADMIN\"}"
+    ] }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "timestamp", "type": "int" },
+    { "name": "access_method", "type": "string", "values": ["Client", "API Connector", "Reverse Proxy"] },
+    { "name": "activity", "type": "string", "values": ["Upload", "Download", "Share", "Edit", "Send", "Post", "Create"] },
+    { "name": "app", "type": "string", "values": ["Microsoft 365", "Google Workspace", "Box", "Slack", "Salesforce", "Dropbox"] },
+    { "name": "classification", "type": "string", "values": ["PII", "Financial Data", "Source Code", "Healthcare Data", "Credentials", ""] },
+    { "name": "dlp_file", "type": "string", "values": ["customer-list.csv", "employee-ssn.xlsx", "api-keys.json", "patient-records.pdf", "credit-cards.csv"] },
+    { "name": "dlp_incidentid", "type": "string" },
+    { "name": "dlp_parentid", "type": "string" },
+    { "name": "dlp_match_info", "type": "dynamic", "values": [
+      [{"dlp_rule": "SSN Detection", "count": 15, "profile": "PII Detection"}],
+      [{"dlp_rule": "Credit Card Numbers", "count": 3, "profile": "PCI-DSS"}, {"dlp_rule": "Bank Account Numbers", "count": 1, "profile": "Financial Data"}],
+      [{"dlp_rule": "API Keys in Source", "count": 5, "profile": "Source Code Protection"}],
+      []
+    ] },
+    { "name": "exposure", "type": "string", "values": ["public", "external", "internal", "private"] },
+    { "name": "file_lang", "type": "string", "values": ["English", "English", "Spanish", ""] },
+    { "name": "file_path", "type": "string", "values": ["/Documents/HR/employee-ssn.xlsx", "/Shared/customer-list.csv", "/code/config/api-keys.json", "/records/patient-records.pdf"] },
+    { "name": "file_size", "type": "int", "values": [51200, 524288, 2048, 2097152, 10240] },
+    { "name": "file_type", "type": "string", "values": ["csv", "xlsx", "json", "pdf", "docx", "txt"] },
+    { "name": "from_user", "type": "string" },
+    { "name": "instance", "type": "string", "values": ["contoso.com", "contoso-dev", "personal"] },
+    { "name": "md5", "type": "string" },
+    { "name": "object", "type": "string", "values": ["customer-list.csv", "employee-ssn.xlsx", "api-keys.json", "patient-records.pdf", "credit-cards.csv"] },
+    { "name": "object_type", "type": "string", "values": ["File", "Mail", "Message"] },
+    { "name": "owner", "type": "string" },
+    { "name": "severity", "type": "string", "values": ["low", "medium", "high", "critical"] },
+    { "name": "status", "type": "string", "values": ["new", "in_progress", "resolved", "dismissed"] },
+    { "name": "url", "type": "string" },
+    { "name": "user", "type": "string" },
+    { "name": "user_id", "type": "string" },
+    { "name": "to_user", "type": "string" },
+    { "name": "title_s", "type": "string", "values": ["DLP Incident - PII Detected", "DLP Incident - Financial Data", "DLP Incident - Source Code Leak", "DLP Incident - Healthcare Data"] },
+    { "name": "src_location", "type": "string", "values": ["Seattle", "San Francisco", "London"] },
+    { "name": "dst_location", "type": "string", "values": ["Ashburn", "San Jose", "Dublin"] }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "LogCreatedDateTime", "type": "datetime" },
+    { "name": "LogCreatedBy", "type": "string" },
+    { "name": "Username", "type": "string" },
+    { "name": "LogType", "type": "string", "values": ["Insert", "Update", "Delete"] },
+    { "name": "TableName", "type": "string", "values": ["BankAccountTable", "UserInfo", "VendTable", "LedgerJournalTable", "CustTable", "SalesTable", "PurchTable", "InventTable", "HcmWorker", "SysUserLog", "SecurityRole", "SecurityUserRole"] },
+    { "name": "TableIdNumber", "type": "int" },
+    { "name": "TableRecId", "type": "long" },
+    { "name": "TableRecVersion", "type": "int" },
+    { "name": "LogRecId", "type": "long" },
+    { "name": "LogPartition", "type": "long" },
+    { "name": "LogCreatedTransactionId", "type": "string" },
+    { "name": "LogDataAreaId", "type": "string", "values": ["USMF", "DEMF", "FRRT", "GBSI", "DAT", ""] },
+    { "name": "InstanceName", "type": "string", "values": ["contoso-prod-fo", "contoso-sandbox-fo", "contoso-uat-fo"] },
+    { "name": "SequenceNumber", "type": "int" },
+    { "name": "Description", "type": "string", "values": ["Bank account record modified", "User login information updated", "Vendor record created", "Journal entry posted", "Customer record updated", "Sales order created", "Purchase order approved", "Inventory adjustment recorded", "Worker record modified", "Security role assignment changed"] },
+    { "name": "Data", "type": "dynamic", "values": [
+      {"ACCOUNTNUM": "CONTOSO-001", "NAME": "Contoso Main Account", "CURRENCYCODE": "USD"},
+      {"USERID": "jsmith", "NETWORKALIAS": "contoso\\jsmith", "ENABLE": 1},
+      {"ACCOUNTNUM": "V-001", "NAME": "Fabrikam Supplies", "VENDGROUP": "20"},
+      {}
+    ] },
+    { "name": "FormattedData", "type": "dynamic", "values": [
+      {"Field": "Name", "OldValue": "Old Account Name", "NewValue": "Contoso Main Account"},
+      {"Field": "Enable", "OldValue": "0", "NewValue": "1"},
+      {}
+    ] }
+  ]
+}

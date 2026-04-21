@@ -1,0 +1,36 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "InvestigationId", "type": "int" },
+    { "name": "Description", "type": "string", "values": ["Suspicious login activity from external IP addresses targeting multiple SAP systems", "Unauthorized access to sensitive transaction codes in production system", "Potential data exfiltration via RFC calls to external systems", "Brute force attack targeting high-privilege SAP accounts", "Privilege escalation through SAP role assignment changes"] },
+    { "name": "Status", "type": "string", "values": ["New", "InProgress", "Closed", "Escalated"] },
+    { "name": "Severity", "type": "string", "values": ["Low", "Medium", "High", "Critical"] },
+    { "name": "Processor", "type": "string" },
+    { "name": "ManagementVisibility", "type": "string", "values": ["Public", "Internal"] },
+    { "name": "CustomerNotification", "type": "boolean", "values": [false, true, false, false] },
+    { "name": "createdAt", "type": "datetime" },
+    { "name": "createdBy", "type": "string" },
+    { "name": "CompletionTimestamp", "type": "datetime" },
+    { "name": "Version", "type": "string", "values": ["1", "2"] },
+    { "name": "Alerts", "type": "dynamic", "values": [
+      [{"alertId": 1001, "patternName": "Login from unexpected network", "score": 85}],
+      [{"alertId": 1002, "patternName": "Critical Transaction Execution", "score": 90}, {"alertId": 1003, "patternName": "Privilege Escalation Attempt", "score": 75}],
+      [{"alertId": 1004, "patternName": "Brute Force Attack", "score": 95}]
+    ] },
+    { "name": "Users", "type": "dynamic", "values": [
+      [{"userId": "JSMITH", "systemId": "PRD", "client": "100"}],
+      [{"userId": "ADMIN", "systemId": "PRD", "client": "100"}, {"userId": "SVC_BACKUP", "systemId": "PRD", "client": "100"}],
+      []
+    ] },
+    { "name": "Systems", "type": "dynamic", "values": [
+      [{"systemId": "PRD", "systemType": "ABAP"}],
+      [{"systemId": "PRD", "systemType": "ABAP"}, {"systemId": "QAS", "systemType": "ABAP"}],
+      []
+    ] },
+    { "name": "Actions", "type": "dynamic", "values": [
+      [{"type": "UserLock", "target": "ATTACKER", "system": "PRD"}],
+      [{"type": "IPBlock", "target": "203.0.113.42"}],
+      []
+    ] }
+  ]
+}

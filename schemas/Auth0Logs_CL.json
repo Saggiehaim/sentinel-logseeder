@@ -1,0 +1,65 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "event_date", "type": "datetime" },
+    { "name": "LogId", "type": "string" },
+    { "name": "EventType", "type": "string", "values": ["s", "f", "fp", "fu", "fc", "ss", "slo", "ssa", "sapi", "scp", "scpr", "gd_auth_succeed", "gd_auth_failed", "gd_enrollment_complete", "mfar", "limit_mu", "limit_wc", "pwd_leak", "w", "cls", "fsa", "flo"] },
+    { "name": "Description", "type": "string", "values": [
+      "Successful login",
+      "Failed login",
+      "Failed login (wrong password)",
+      "Failed login (invalid email/username)",
+      "Failed by Connector",
+      "Successful signup",
+      "Successful logout",
+      "Successful silent auth",
+      "Success API Operation",
+      "Successful change password",
+      "Successful change password request",
+      "Multi-factor authentication success",
+      "Multi-factor authentication failed",
+      "Multi-factor enrollment complete",
+      "Multi-factor authentication required",
+      "Blocked IP Address",
+      "Blocked Account",
+      "Breached password",
+      "Warning During Login",
+      "Code/Link Sent",
+      "Failed Silent Auth",
+      "Failed Logout"
+    ] },
+    { "name": "ActorUserId", "type": "string" },
+    { "name": "ActorUsername", "type": "string" },
+    { "name": "Audience", "type": "string", "values": ["https://contoso.auth0.com/api/v2/", "https://contoso.auth0.com/userinfo", "https://api.contoso.com"] },
+    { "name": "ClientId", "type": "string" },
+    { "name": "ClientName", "type": "string", "values": ["Contoso Web App", "Contoso Mobile App", "Contoso Admin Portal", "Contoso API", "Contoso SPA", "Default App"] },
+    { "name": "Connection", "type": "string", "values": ["Username-Password-Authentication", "google-oauth2", "contoso-azure-ad", "contoso-okta", "contoso-saml", "email"] },
+    { "name": "ConnectionId", "type": "string" },
+    { "name": "Details", "type": "dynamic", "values": [
+      {"completedAt": "2025-01-15T14:22:05Z", "elapsedTime": 1245, "initiatedAt": "2025-01-15T14:22:04Z", "prompts": [{"completedAt": "2025-01-15T14:22:05Z", "connection": "Username-Password-Authentication", "name": "prompt-authenticate", "strategy": "auth0"}], "session_id": "SES-AUTH0-001", "stats": {"loginsCount": 42}},
+      {"completedAt": "2025-01-15T15:10:02Z", "elapsedTime": 850, "error": {"message": "Wrong email or password.", "type": "invalid_user_password"}, "session_id": "SES-AUTH0-002"},
+      {"completedAt": "2025-01-15T09:45:01Z", "elapsedTime": 320, "prompts": [{"completedAt": "2025-01-15T09:45:01Z", "name": "mfa-push", "provider": "guardian"}], "session_id": "SES-AUTH0-003"},
+      {"completedAt": "2025-01-15T20:30:03Z", "elapsedTime": 500, "riskAssessment": {"assessments": {"UntrustedIP": {"code": "low_risk"}}, "confidence": "high"}}
+    ] },
+    { "name": "HttpUserAgent", "type": "string", "values": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15",
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15",
+      "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36",
+      "okhttp/4.12.0"
+    ] },
+    { "name": "IsMobile", "type": "boolean", "values": [false, false, true, true, false, false] },
+    { "name": "LocationInfo", "type": "dynamic", "values": [
+      {"city_name": "Seattle", "continent_code": "NA", "country_code": "US", "country_code3": "USA", "country_name": "United States", "latitude": 47.6062, "longitude": -122.3321, "time_zone": "America/Los_Angeles"},
+      {"city_name": "London", "continent_code": "EU", "country_code": "GB", "country_code3": "GBR", "country_name": "United Kingdom", "latitude": 51.5074, "longitude": -0.1278, "time_zone": "Europe/London"},
+      {"city_name": "Moscow", "continent_code": "EU", "country_code": "RU", "country_code3": "RUS", "country_name": "Russia", "latitude": 55.7558, "longitude": 37.6173, "time_zone": "Europe/Moscow"},
+      {"city_name": "San Francisco", "continent_code": "NA", "country_code": "US", "country_name": "United States", "latitude": 37.7749, "longitude": -122.4194, "time_zone": "America/Los_Angeles"}
+    ] },
+    { "name": "Scope", "type": "string", "values": ["openid profile email", "openid", "openid profile", "offline_access openid profile email", ""] },
+    { "name": "SrcHostname", "type": "string", "values": ["", "", "contoso.auth0.com", ""] },
+    { "name": "SrcIpAddr", "type": "string" },
+    { "name": "Strategy", "type": "string", "values": ["auth0", "google-oauth2", "waad", "samlp", "oidc", "auth0"] },
+    { "name": "StrategyType", "type": "string", "values": ["database", "social", "enterprise", "database", "enterprise"] },
+    { "name": "TenantName", "type": "string", "values": ["contoso", "contoso-dev", "contoso-staging"] }
+  ]
+}

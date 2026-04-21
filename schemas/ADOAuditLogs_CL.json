@@ -1,0 +1,34 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Id", "type": "string" },
+    { "name": "ActionId", "type": "string", "values": ["Git.PushCreated", "Git.RefUpdateStarted", "Git.RepositoryCreated", "Git.RepositoryDeleted", "Group.UpdateGroupMembership.Add", "Group.UpdateGroupMembership.Remove", "Policy.PolicyConfigModified", "Pipelines.PipelineCreated", "Pipelines.PipelineRunQueued", "Pipelines.PipelineRunCompleted", "Project.AreaPath.Create", "Project.Create", "Security.ModifyPermission", "Security.ModifyAccessControlLists", "Token.PatCreateEvent", "Token.PatRevokeEvent", "Licensing.Modified", "Extension.Installed", "Extension.Uninstalled"] },
+    { "name": "ActivityId", "type": "string" },
+    { "name": "ActorDisplayName", "type": "string" },
+    { "name": "ActorUPN", "type": "string" },
+    { "name": "ActorUserId", "type": "string" },
+    { "name": "ActorCUID", "type": "string" },
+    { "name": "ActorClientId", "type": "string", "values": ["", "", "app-client-id-001", ""] },
+    { "name": "ActorImageUrl", "type": "string", "values": ["", ""] },
+    { "name": "Area", "type": "string", "values": ["Git", "Group", "Policy", "Pipelines", "Project", "Security", "Token", "Licensing", "Extension", "Permissions"] },
+    { "name": "AuthenticationMechanism", "type": "string", "values": ["AAD", "PAT", "SSH", "OAuth", "FedAuth", "ServicePrincipal"] },
+    { "name": "Category", "type": "string", "values": ["modify", "create", "delete", "remove", "execute", "access", "rename"] },
+    { "name": "CategoryDisplayName", "type": "string", "values": ["Modify", "Create", "Delete", "Remove", "Execute", "Access", "Rename"] },
+    { "name": "CorrelationId", "type": "string" },
+    { "name": "Data", "type": "dynamic", "values": [
+      {"EventId": "Git.PushCreated", "PushId": 12345, "RefUpdates": [{"name": "refs/heads/main", "oldObjectId": "abc123", "newObjectId": "def456"}], "RepositoryName": "contoso-app"},
+      {"EventId": "Group.UpdateGroupMembership.Add", "GroupName": "Project Administrators", "MemberName": "jsmith@contoso.com"},
+      {"EventId": "Pipelines.PipelineRunCompleted", "PipelineName": "CI-Build", "RunId": 67890, "Result": "succeeded"},
+      {"EventId": "Token.PatCreateEvent", "DisplayName": "automation-pat", "Scope": "vso.code_write vso.build_execute", "ValidTo": "2025-07-15T00:00:00Z"},
+      {}
+    ] },
+    { "name": "Details", "type": "string", "values": ["Push to refs/heads/main in contoso-app", "Added jsmith@contoso.com to Project Administrators", "Pipeline CI-Build run #67890 succeeded", "PAT 'automation-pat' created with scopes: code_write, build_execute", "Permission 'GenericContribute' modified on repository contoso-app", ""] },
+    { "name": "IpAddress", "type": "string" },
+    { "name": "ProjectId", "type": "string" },
+    { "name": "ProjectName", "type": "string", "values": ["ContosoApp", "Infrastructure", "SecurityTools", "DevOps-Pipelines", ""] },
+    { "name": "ScopeDisplayName", "type": "string", "values": ["ContosoApp", "Contoso Organization", "Infrastructure", ""] },
+    { "name": "ScopeId", "type": "string" },
+    { "name": "ScopeType", "type": "string", "values": ["project", "organization", "deployment"] },
+    { "name": "UserAgent", "type": "string", "values": ["git/2.43.0", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0", "VSServices/17.9.34902.65", "Azure Pipelines", ""] }
+  ]
+}

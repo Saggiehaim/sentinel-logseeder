@@ -1,0 +1,49 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "eventId", "type": "string" },
+    { "name": "eventName", "type": "string", "values": ["CreateInstance", "DeleteDisk", "DescribeInstances", "ConsoleSignin", "ConsoleSignout", "CreateUser", "DeleteUser", "AttachPolicyToUser", "DetachPolicyFromUser", "CreateAccessKey", "DeleteAccessKey", "CreateBucket", "PutBucketACL", "CreateSecurityGroup", "AuthorizeSecurityGroup", "AllocateEipAddress", "ModifyInstanceAttribute"] },
+    { "name": "eventType", "type": "string", "values": ["ApiCall", "ConsoleOperation", "ConsoleSignin", "ConsoleSignout", "AliyunServiceEvent"] },
+    { "name": "eventCategory", "type": "string", "values": ["Management"] },
+    { "name": "eventRW", "type": "string", "values": ["Write", "Read", "Write", "Write", "Read", "Write"] },
+    { "name": "eventVersion", "type": "string", "values": ["1"] },
+    { "name": "eventTime", "type": "string" },
+    { "name": "eventSource", "type": "string", "values": ["ecs.aliyuncs.com", "ram.aliyuncs.com", "slb.aliyuncs.com", "vpc.aliyuncs.com", "rds.aliyuncs.com", "oss.aliyuncs.com", "sts.aliyuncs.com", "kms.aliyuncs.com"] },
+    { "name": "serviceName", "type": "string", "values": ["Ecs", "Ram", "Slb", "Vpc", "Rds", "Oss", "Sts", "Kms", "Actiontrail", "Ack"] },
+    { "name": "acsRegion", "type": "string", "values": ["cn-hangzhou", "cn-shanghai", "cn-beijing", "us-west-1", "eu-central-1", "ap-southeast-1"] },
+    { "name": "sourceIpAddress", "type": "string" },
+    { "name": "userAgent", "type": "string", "values": ["Chinese/aliyun-sdk-java", "Chinese/Chinese Chinese (Chinese)", "Chinese/Chinese Chinese Chinese/Chinese", "Chinese/Chinese Chinese 120.0.0.0", "Chinese/Chinese", "Chinese/Chinese Chinese aliyun-sdk-go", "Chinese/Chinese Chinese Chinese/Chinese Chinese/Chinese Chinese Chinese", "Chinese/Chinese Chinese Chinese Chinese Chinese/Chinese Chinese Chinese Chinese", "Chinese/Chinese Chinese Chinese/Chinese Chinese Chinese", "Chinese/Chinese Chinese Chinese/Chinese Chinese Chinese Chinese"] },
+    { "name": "userIdentity", "type": "dynamic", "values": [
+      {"type": "root-account", "principalId": "1234567890", "accountId": "1234567890", "userName": "root"},
+      {"type": "ram-user", "principalId": "usr-001", "accountId": "1234567890", "userName": "jsmith@contoso.com", "accessKeyId": "LTAI5tABC123"},
+      {"type": "assumed-role", "principalId": "role-001", "accountId": "1234567890", "userName": "role/ECSAdmin", "sessionContext": {"attributes": {"creationDate": "2025-01-15T08:00:00Z"}}},
+      {"type": "system", "principalId": "system", "accountId": "1234567890"}
+    ] },
+    { "name": "requestId", "type": "string" },
+    { "name": "apiVersion", "type": "string", "values": ["2014-05-26", "2015-05-01", "2019-01-01"] },
+    { "name": "isGlobal", "type": "boolean", "values": [false, false, true, false] },
+    { "name": "resourceType", "type": "string", "values": ["ACS::ECS::Instance", "ACS::RAM::User", "ACS::RAM::Role", "ACS::OSS::Bucket", "ACS::VPC::VPC", "ACS::RDS::DBInstance", "ACS::SLB::LoadBalancer", ""] },
+    { "name": "resourceName", "type": "string", "values": ["i-0a1b2c3d4e", "jsmith@contoso.com", "contoso-prod-bucket", "vpc-0a1b2c3d4e", ""] },
+    { "name": "referencedResources", "type": "dynamic", "values": [
+      {"ACS::ECS::Instance": ["i-0a1b2c3d4e5f60001"]},
+      {"ACS::RAM::User": ["jsmith@contoso.com"]},
+      {"ACS::OSS::Bucket": ["contoso-prod-data"]},
+      {}
+    ] },
+    { "name": "requestParameters", "type": "dynamic", "values": [
+      {"InstanceId": "i-0a1b2c3d4e5f60001", "RegionId": "cn-hangzhou"},
+      {"UserName": "jsmith@contoso.com", "PolicyName": "AliyunECSFullAccess"},
+      {}
+    ] },
+    { "name": "requestParameterJson", "type": "string", "values": ["", ""] },
+    { "name": "responseElements", "type": "dynamic", "values": [
+      {"RequestId": "REQ-001", "InstanceId": "i-0a1b2c3d4e5f60001"},
+      {"RequestId": "REQ-002"},
+      {}
+    ] },
+    { "name": "errorCode", "type": "string", "values": ["", "", "Forbidden.RAM", "InvalidParameter", "InternalError", ""] },
+    { "name": "errorMessage", "type": "string", "values": ["", "", "User not authorized to operate on resource", "The specified parameter is not valid", ""] },
+    { "name": "eventAttributes", "type": "dynamic", "values": [{"SensitiveAction": "true"}, {}, {}] },
+    { "name": "additionalEventData", "type": "dynamic", "values": [{}, {}, {}] }
+  ]
+}

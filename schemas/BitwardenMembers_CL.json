@@ -1,0 +1,9 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "memberId", "type": "string" },
+    { "name": "userId", "type": "string" },
+    { "name": "name", "type": "string" },
+    { "name": "email", "type": "string" }
+  ]
+}

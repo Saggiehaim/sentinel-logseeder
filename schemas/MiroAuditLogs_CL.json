@@ -1,0 +1,29 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "id", "type": "string" },
+    { "name": "createdAt", "type": "datetime" },
+    { "name": "event", "type": "string", "values": ["board_opened", "board_created", "board_updated", "board_deleted", "board_shared", "board_unshared", "board_exported", "board_copied", "team_member_added", "team_member_removed", "team_member_role_changed", "team_settings_updated", "organization_member_invited", "organization_member_removed", "sso_settings_updated", "scim_token_created", "user_logged_in", "user_logged_out", "app_installed", "app_uninstalled"] },
+    { "name": "category", "type": "string", "values": ["board", "team", "organization", "user", "app", "integration"] },
+    { "name": "logType", "type": "string", "values": ["audit"] },
+    { "name": "createdBy_id", "type": "string" },
+    { "name": "createdBy_email", "type": "string" },
+    { "name": "createdBy_name", "type": "string" },
+    { "name": "createdBy_type", "type": "string", "values": ["user", "service_account", "app"] },
+    { "name": "context_ip", "type": "string" },
+    { "name": "context_organization_id", "type": "string" },
+    { "name": "context_organization_name", "type": "string", "values": ["Contoso Organization"] },
+    { "name": "context_organization_type", "type": "string", "values": ["enterprise", "business", "team"] },
+    { "name": "context_team_id", "type": "string" },
+    { "name": "context_team_name", "type": "string", "values": ["Engineering", "Security", "Product", "Design", ""] },
+    { "name": "context_team_type", "type": "string", "values": ["team", ""] },
+    { "name": "object_id", "type": "string" },
+    { "name": "object_name", "type": "string", "values": ["Sprint Planning Board", "Architecture Diagram", "Incident Response Playbook", "Product Roadmap", "jsmith@contoso.com", "Engineering Team", ""] },
+    { "name": "details", "type": "dynamic", "values": [
+      {"role": "editor", "board_id": "BRD-001"},
+      {"old_role": "viewer", "new_role": "admin", "member_email": "agarcia@contoso.com"},
+      {"setting": "guest_access", "old_value": "disabled", "new_value": "enabled"},
+      {}
+    ] }
+  ]
+}

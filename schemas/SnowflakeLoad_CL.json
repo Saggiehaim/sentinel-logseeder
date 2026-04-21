@@ -1,0 +1,11 @@
+{
+  "columns": [
+    { "name": "TimeGenerated", "type": "datetime" },
+    { "name": "Data", "type": "string", "values": [
+      "{\"TABLE_ID\":5001,\"TABLE_NAME\":\"RAW_EVENTS\",\"SCHEMA_ID\":3001,\"SCHEMA_NAME\":\"RAW\",\"CATALOG_ID\":2001,\"CATALOG_NAME\":\"STAGING_DB\",\"FILE_NAME\":\"s3://contoso-prod-data/events/2025/01/15/events_001.csv.gz\",\"LAST_LOAD_TIME\":\"2025-01-15T02:15:00.000Z\",\"STATUS\":\"LOADED\",\"ROW_COUNT\":150000,\"ROW_PARSED\":150000,\"FIRST_ERROR_MESSAGE\":null,\"FIRST_ERROR_LINE_NUMBER\":null,\"ERROR_COUNT\":0,\"ERROR_LIMIT\":1}",
+      "{\"TABLE_ID\":5002,\"TABLE_NAME\":\"USER_ACTIVITY\",\"SCHEMA_ID\":3002,\"SCHEMA_NAME\":\"PUBLIC\",\"CATALOG_ID\":2002,\"CATALOG_NAME\":\"ANALYTICS_DB\",\"FILE_NAME\":\"s3://contoso-prod-data/activity/2025/01/15/activity_001.parquet\",\"LAST_LOAD_TIME\":\"2025-01-15T06:00:00.000Z\",\"STATUS\":\"LOADED\",\"ROW_COUNT\":500000,\"ROW_PARSED\":500000,\"ERROR_COUNT\":0}",
+      "{\"TABLE_ID\":5003,\"TABLE_NAME\":\"TRANSACTIONS\",\"SCHEMA_ID\":3001,\"SCHEMA_NAME\":\"RAW\",\"CATALOG_ID\":2001,\"CATALOG_NAME\":\"STAGING_DB\",\"FILE_NAME\":\"s3://contoso-prod-data/txns/2025/01/15/txn_batch_003.json.gz\",\"LAST_LOAD_TIME\":\"2025-01-15T08:30:00.000Z\",\"STATUS\":\"PARTIALLY_LOADED\",\"ROW_COUNT\":98500,\"ROW_PARSED\":100000,\"FIRST_ERROR_MESSAGE\":\"Numeric value 'abc' is not recognized\",\"FIRST_ERROR_LINE_NUMBER\":45623,\"FIRST_ERROR_CHARACTER_POSITION\":34,\"FIRST_ERROR_COL_NAME\":\"AMOUNT\",\"ERROR_COUNT\":1500,\"ERROR_LIMIT\":1}",
+      "{\"TABLE_ID\":5004,\"TABLE_NAME\":\"AUDIT_LOG\",\"SCHEMA_ID\":3003,\"SCHEMA_NAME\":\"SECURITY\",\"CATALOG_ID\":2003,\"CATALOG_NAME\":\"PRODUCTION_DB\",\"FILE_NAME\":\"azure://contosoprodlogs/audit/2025-01-15.csv.gz\",\"LAST_LOAD_TIME\":\"2025-01-15T12:00:00.000Z\",\"STATUS\":\"LOAD_FAILED\",\"ROW_COUNT\":0,\"ROW_PARSED\":0,\"FIRST_ERROR_MESSAGE\":\"File not found\",\"ERROR_COUNT\":1}"
+    ] }
+  ]
+}

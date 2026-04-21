@@ -603,6 +603,15 @@ The API documentation tells you:
 
 Use this information to populate the `values` arrays in the schema file for realistic data generation.
 
+### Step 6 - Update the _meta.json file in the schemas/ folder
+ 
+If a new table file is generated because it did not exist before, you need to update the file _meta.json in the schemas/ folder. This is only the case for official sentinel content solution packages, not custom tables that the user has added himself. The flow is as follows:
+1. Check the table at https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/sentinel/includes/sentinel-tables-connectors.md to find the table that was just generated and the Solution that has the table in its definition. We are only interested in the ones that are DCR enabled (which the user can actually write to)
+2. Do a fuzzy search in https://github.com/Azure/Azure-Sentinel/tree/master/Solutions to find the solution that has this table, we will need the offer id which is usually in SolutionMetadata.json and the package information usually under packages/ in the solution folder
+3. Update the _meta.json file, this file should normally already contain all the solution that are DCR enabled
+  1. If not present for some reason, you add a new entry in the solution root array node. The schema has a name of the solution, the solutionFolder (which is slug from step 2), packageId and version (from packages) and contentId (contentId is the offer Id). The OfficialTables is the tables that the solution has (based on link in 1), you always fill these in. The hasSchema and tablesInRepo are with regard of the current repository. So, if not implemented and you leave the hasSchema to "none", if some tables are present you set it to "partial" and "all" if all tables are present to sample. The tablesInRepo are then actual files present, you input the names of the tables without file extension.
+  2. If present, you just update the hasSchema (all, partial, none) and tablesInRepo
+
 ### Fallback — Sentinel GitHub and Microsoft Docs
 
 If the Sentinel Ninja index doesn't have the product, fall back to:

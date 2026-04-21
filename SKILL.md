@@ -102,12 +102,18 @@ User provides table/product name  ─OR─  User provides a sample file
 │   │   ├─ 3. Search Sentinel GitHub for connector definition
 │   │   │     https://github.com/Azure/Azure-Sentinel
 │   │   │     Check: Solutions/<Product>/Data Connectors/
-│   │   │     Check: DataConnectors/<Product>/
 │   │   │     Check: Sample Data/<product>/
 │   │   │
 │   │   ├── CONNECTOR FOUND → Scenario 2 (new custom table, known connector)
 │   │   │
-│   │   └── NO CONNECTOR → Scenario 3 (unknown table, ask user for docs)
+│   │   └── NO CONNECTOR
+│   │       │
+│   │       ├─ 4. Search Sentinel Ninja tables-index for schema & connector mapping
+│   │       │     https://github.com/oshezaf/sentinelninja/blob/main/Solutions%20Docs/tables-index.md
+│   │       │
+│   │       ├── FOUND IN INDEX → Use schema/connector info from index → Scenario 2
+│   │       │
+│   │       └── NOT FOUND → Scenario 3 (unknown table, ask user for docs)
 │   │
 │   └─ (If user gave a product name instead of table name, use Product → Table Discovery below)
 │
